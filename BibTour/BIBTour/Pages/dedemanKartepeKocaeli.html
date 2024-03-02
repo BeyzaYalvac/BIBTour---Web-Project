@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Uludağ Kaya Hotel</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel15.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel16.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel17.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel15.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Dedeman Kartepe Kocaeli</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Positioned Amidst Majestic Peaks: Unmatched Views
+      </div>
+      Dedeman Kartepe graces the landscape against the backdrop of Kocaeli's
+      natural wonders. Revel in breathtaking views from every window, whether
+      it's the pristine white of winter or the tranquil greens of summer,
+      providing a picturesque setting for a memorable stay.
+      <div class="h2ofcontainerexp">
+        Luxury and Comfort Combined: Rooms and Suites
+      </div>
+      Our hotel's rooms and suites offer generously designed spaces with a touch
+      of elegance. Modern furnishings and warm color palettes provide a
+      comfortable and peaceful retreat, ensuring a memorable and relaxing stay
+      for our guests.
+      <div class="h2ofcontainerexp">
+        Winter Sports and Activities: Adventure Amidst Nature
+      </div>
+      Discover the thrill of winter sports and immerse yourself in nature's
+      wonders. Dedeman Kartepe Hotel serves as an excellent starting point for
+      those eager to experience activities such as skiing, snowboarding, and
+      more, making it a haven for adventure enthusiasts.
+      <div class="h2ofcontainerexp">
+        Moments of Gastronomic Delights: Restaurant and Café Options
+      </div>
+      Indulge in a culinary journey at our on-site restaurants and cafes,
+      offering a diverse menu catering to every palate. From local flavors to
+      international cuisines, our dining options ensure that your gastronomic
+      experience is nothing short of memorable.
+
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda9.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Deluxe Mountain View Room</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$557</h5>
+              <p class="card-address">
+                Our luxurious Deluxe Mountain View rooms at the hotel blend
+                comfort and elegance seamlessly. Enriched with modern design
+                elements and wooden accents, the rooms welcome you with a
+                breathtaking mountain view. The expansive windows fill the room
+                with natural light, creating a warm and inviting atmosphere.
+                With high comfort standards, these rooms promise guests an
+                unforgettable stay.
+              </p>
+              <p class="card-details">Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda7.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Family Suite</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$419,99</h5>
+              <p class="card-address">
+                The Family Suite provides a spacious accommodation designed for
+                your comfort and family togetherness. Equipped with a separate
+                living room and bedroom, the suite is an ideal choice for
+                families. A specially designated play area for your children
+                enhances the overall family vacation experience. Natural tones
+                and an airy atmosphere make your stay and your family's
+                experience truly unforgettable.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

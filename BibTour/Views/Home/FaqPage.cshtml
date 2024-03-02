@@ -1,0 +1,287 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/BIBTour/Pages/faq.css" />
+    <link rel="stylesheet" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link rel="stylesheet"
+          href="path/to/font-awesome/css/font-awesome.min.css" />
+    <title>BIBtour | Frequently Asked Questions</title>
+</head>
+
+<body>
+    <header>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const hamburgerMenu = document.getElementById("hamburger-menu");
+                const navbarList = document.querySelector(".navbar-list");
+
+                hamburgerMenu.addEventListener("click", function () {
+                    navbarList.classList.toggle("show");
+                });
+            });
+        </script>
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener("scroll", function () {
+            var scrollPercentage =
+                (document.documentElement.scrollTop + document.body.scrollTop) /
+                (document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight);
+
+            document.documentElement.style.setProperty(
+                "--scroll",
+                scrollPercentage
+            );
+        });
+    </script>
+    <div class="heading">
+        <h1>Frequently Asked Questions</h1>
+    </div>
+
+    <div class="faq-container">
+        <details>
+            <summary>
+                <span class="faq-title"> What are the payment options? </span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="expand-icon"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     fill="none"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </summary>
+            <div class="faq-content">
+                <p>We have credit card, bank transfer and cash payment options.</p>
+                was
+            </div>
+        </details>
+        <details>
+            <summary>
+                <span class="faq-title"> How can I set hotel room preferences? </span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="expand-icon"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     fill="none"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    You can specify your special requests and choose your room
+                    preferences during your accommodation reservation.
+                </p>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <span class="faq-title"> Do you have special campaigns? </span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="expand-icon"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     fill="none"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    We organize special campaigns periodically. You can be informed
+                    about these campaigns by subscribing to our newsletter.
+                    <a href="login.html"> Click to subscribe.</a>
+                </p>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <span class="faq-title"> How do you ensure security? </span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="expand-icon"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     fill="none"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    Safety is ensured by careful selection of our travel routes, our
+                    professional guides and local security measures.
+                </p>
+            </div>
+        </details>
+        <details>
+            <summary>
+                <span class="faq-title"> What tour packages do you offer? </span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="expand-icon"
+                     width="24"
+                     height="24"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     fill="none"
+                     stroke-linecap="round"
+                     stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 6l6 6l-6 6"></path>
+                </svg>
+            </summary>
+            <div class="faq-content">
+                <p>
+                    The tour packages we offer are generally cultural, winter and
+                    gastronomy themed. For detailed information, you can visit our Tour
+                    Packages page.
+                    <a href="#"> Click for our tours.</a>
+                </p>
+            </div>
+        </details>
+    </div>
+    <script src="faq.js"></script>
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

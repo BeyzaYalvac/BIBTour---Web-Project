@@ -1,0 +1,336 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | HoneyMoon Hotels</title>
+    <link rel="stylesheet" href="~/BIBTour/Pages/StyleCampaignOtels.css" />
+    <link rel="stylesheet" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+    <header>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const hamburgerMenu = document.getElementById("hamburger-menu");
+                const navbarList = document.querySelector(".navbar-list");
+
+                hamburgerMenu.addEventListener("click", function () {
+                    navbarList.classList.toggle("show");
+                });
+            });
+        </script>
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <script src="Script.js"></script>
+    <main>
+        <section class="carousell">
+            <div class="img-list" id="img-list">
+                <img src="~/BIBTour/Assets/honeymoon1.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/honeymoon2.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/honeymoon4.jpg" width="1000" />
+            </div>
+            <script>
+                document.addEventListener("scroll", function () {
+                    var scrollPercentage =
+                        (document.documentElement.scrollTop + document.body.scrollTop) /
+                        (document.documentElement.scrollHeight -
+                            document.documentElement.clientHeight);
+
+                    document.documentElement.style.setProperty(
+                        "--scroll",
+                        scrollPercentage
+                    );
+                });
+            </script>
+            <div class="content">
+                <div class="text-content">
+                    <h2>Honeymoon Haven: Unforgettable Romance</h2>
+                    <p>
+                        Escape to a world of enchantment and romance with our exclusive
+                        honeymoon hotels. Immerse yourselves in luxury and intimacy as you
+                        embark on this journey of love. Our carefully curated
+                        accommodations and personalized services create the perfect
+                        setting for a honeymoon to remember. Whether it's a private beach,
+                        scenic views, or indulgent spa treatments, our honeymoon hotels
+                        are designed to make your first moments as a married couple truly
+                        magical. Experience the epitome of romantic bliss in our
+                        handpicked destinations, where every detail is crafted to ensure
+                        your honeymoon is an unforgettable celebration of love.
+                    </p>
+                </div>
+            </div>
+            <div class="btn-section">
+                <div class="caro-btn" onclick="slideImg(0)"></div>
+                <div class="caro-btn" onclick="slideImg(1)"></div>
+                <div class="caro-btn" onclick="slideImg(2)"></div>
+            </div>
+        </section>
+    </main>
+    <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    <div class="hotel-body">
+        <h1><div class="head">Honeymoon Hotels</div></h1>
+        <div class="head"></div>
+        <div class="aside"></div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/La Boheme Kabak/tsr12320637856297451103440.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">La Boheme Kabak</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$119,99</h5>
+                        <p class="card-address">
+                            Indulge in a regal escape at Princess Marin Hotel, where luxury
+                            meets sophistication. Nestled in the heart of the city, our
+                            hotel offers a sanctuary of elegance for both business and
+                            leisure travelers. Immerse yourself in the epitome of comfort
+                            with our meticulously designed rooms, complemented by
+                            world-class amenities.
+                        </p>
+                        <p class="card-details">
+                            43 Bed &middot; 56 bath &middot; 27,644 sqft
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/laBohameKabak.html" class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/boyalık-beach-hotel cesme/boyalık-dıs-uzak.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Maxx Royal Belek Golf Resort</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$639,99</h5>
+                        <p class="card-address">
+                            Nestled in the picturesque town of Belek along the mesmerizing
+                            Antalya coastline, Maxx Royal Belek Golf Resort offers an
+                            unparalleled luxury experience. Boasting its private beach,
+                            world-class golf courses, lavish accommodations, and a myriad of
+                            exclusive amenities, the resort ensures an unforgettable stay.
+                            Maxx Royal Belek seamlessly combines comfort and entertainment
+                            to deliver a unique holiday experience.
+                        </p>
+                        <p class="card-details">
+                            134 Bed &middot; 150 bath &middot; 45,000 sqft
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/maxxRoyalBelekGolfResort.html" class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/Titanic Deluxe Bodrum/Titanic-Deluxe-Bodrum-Genel-302726.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Titanic Deluxe Bodrum</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$400</h5>
+                        <p class="card-address">
+                            Situated in a prime location, Titanic Deluxe Hotel offers a
+                            grand escape with its luxurious accommodations, world-class
+                            amenities, and impeccable service. Whether you seek relaxation
+                            by the pool, gourmet dining experiences, or indulgent spa
+                            treatments, Titanic Deluxe Hotel promises a memorable stay in
+                            the heart of luxury.
+                        </p>
+                        <p class="card-details">
+                            114 Bed &middot; 162 bath &middot; 40,120 sqft
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/titanicDeluxeBodrum.html" class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/Side Sun Hotel/Side-Sun-Hotel-Genel-328777.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Side Sun Hotel</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$200</h5>
+                        <p class="card-address">
+                            Situated in the charming town of Side, Side Sun Hotel offers a
+                            delightful escape with a range of thoughtfully designed rooms to
+                            cater to every guest's needs. Whether you're seeking simplicity,
+                            family-friendly spaces, or a romantic retreat, our hotel
+                            provides a cozy haven for your Turkish getaway.
+                        </p>
+                        <p class="card-details">
+                            74 Bed &middot; 99 bath &middot; 41,158 sqft
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/SideSunHotel.html" class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+    <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | LuxuryVoyageTorba</title>
+
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link rel="stylesheet" href="../Style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+      
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img src="../Assets/uzak-bakım-princess.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/princess-marin-dis.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/oda-ici-3.png" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/oda-ici-2.png" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/oda-ici-1.png" alt="" />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Princess Marin Hotel</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">Welcome to Princess Marin Hotel</div>
+      Nestled in the heart of tranquility and sophistication, Princess Marin
+      Hotel invites you to experience a world of luxury and comfort. Located in
+      the vibrant city center, our hotel is a haven for both business and
+      leisure travelers seeking an unparalleled stay in a stylish and
+      contemporary setting.
+      <div class="h2ofcontainerexp">
+        A Tranquil Oasis in the Heart of the City
+      </div>
+      Escape the hustle and bustle of everyday life as you step into the refined
+      ambiance of Princess Marin Hotel. Our modern and tastefully decorated
+      rooms offer a perfect blend of comfort and elegance, ensuring a restful
+      stay for our discerning guests. From spacious suites to cozy standard
+      rooms, each accommodation is designed with your ultimate relaxation in
+      mind. World-Class Amenities for a Seamless Stay At Princess Marin Hotel,
+      we believe in pampering our guests with top-notch amenities. Unwind in our
+      rooftop spa, take a refreshing dip in our crystal-clear pool, or maintain
+      your fitness routine in our state-of-the-art gym. Our attentive staff is
+      dedicated to making your stay as enjoyable as possible, providing
+      personalized service to meet your every need. Exquisite Dining Experience
+      Indulge your taste buds in our exquisite dining options, where culinary
+      delights await you. From local flavors to international cuisine, our
+      talented chefs craft mouthwatering dishes using the finest ingredients.
+      Whether you choose to dine in the elegant restaurant or enjoy a casual
+      meal in the charming courtyard, Princess Marin Hotel promises a
+      gastronomic journey that will leave you craving for more. Versatile Event
+      Spaces for Every Occasion Princess Marin Hotel is not only a retreat for
+      relaxation but also an ideal venue for business meetings, conferences, and
+      social events. Our flexible and well-equipped event spaces cater to
+      gatherings of all sizes, ensuring a seamless and successful event for our
+      guests.
+      <div class="h2ofcontainerexp">Explore the City’s Rich Culture</div>
+      Conveniently located near popular attractions, Princess Marin Hotel
+      provides easy access to the city's cultural and entertainment hubs.
+      Immerse yourself in the rich history and vibrant energy of the
+      surroundings, and let our concierge guide you to the best experiences the
+      city has to offer.
+      <div class="h2ofcontainerexp">Book Your Stay Today</div>
+      Discover a world of luxury and sophistication at Princess Marin Hotel.
+      Whether you're traveling for business or pleasure, our hotel promises an
+      unforgettable experience in the heart of the city. Book your stay with us
+      and elevate your journey to new heights of comfort and style.
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../Assets/oda-ici-3.png" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Deluxe Suite - Tranquil Retreat</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$250</h5>
+              <p class="card-address">
+                Indulge in the epitome of luxury with our Deluxe Suite. This
+                spacious and elegantly appointed room offers a tranquil escape
+                for those seeking a serene and rejuvenating experience.
+              </p>
+              <p class="card-details">3 Bed &middot; 1 bath &middot; 60 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../Assets/oda-ici-1.png" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Executive Loft - Urban Chic</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$180</h5>
+              <p class="card-address">
+                Experience urban chic in our Executive Loft. Ideal for the
+                modern traveler, this stylish space combines comfort with
+                contemporary design. Immerse yourself in the vibrant energy of
+                the city while enjoying the privacy of your own sanctuary.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 45 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../Assets/oda-ici-2.png" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Cozy Retreat - Budget-Friendly Comfort
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$120</h5>
+              <p class="card-address">
+                Discover comfort without compromising on style in our Cozy
+                Retreat. Perfect for budget-conscious travelers, this
+                well-appointed room offers a warm and inviting atmosphere. Enjoy
+                essential amenities at an affordable rate.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 30 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a
+                href="../WebProject_2100005861_2000003934_2000004353_Task1/index.html"
+                >Home</a
+              >
+            </li>
+            <li><a href="">Tours</a></li>
+            <li><a href="">Hotels</a></li>
+            <li><a href="">Campaigns</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li>
+              <a
+                href="../WebProject_2100005861_2000003934_2000004353_Task1/Pages/contactUs.html"
+                >Contact</a
+              >
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img
+              src="../WebProject_2100005861_2000003934_2000004353_Task1i/Assets/X.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

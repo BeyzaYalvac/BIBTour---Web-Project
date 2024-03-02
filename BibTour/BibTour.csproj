@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C12ECB6D-2B02-408A-9FDE-0D7A19D5447D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BibTour</RootNamespace>
+    <AssemblyName>BibTour</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44396</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.3.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.3.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.3.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\CardModel.cs" />
+    <Compile Include="Models\DbUser.cs" />
+    <Compile Include="Models\LoginDTO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BIBTour\Assets\2191323-200.png" />
+    <Content Include="BIBTour\Assets\AboutUsNav.jpeg" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkayma-dıs-uzak-gece.png" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkaymak-dıs-yakın.png" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkaymak-ic-havuz.png" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkaymak-oda-1.jpg" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkaymak-oda-2.jpg" />
+    <Content Include="BIBTour\Assets\Antalya özkaymak hotel\ozkaymak-oda-3.jpg" />
+    <Content Include="BIBTour\Assets\Background.svg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-oda-1.jpg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-oda-2.jpeg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-oda-3.jpeg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-otel-dıs-uzak.jpg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-otel-dıs-yakın.jpg" />
+    <Content Include="BIBTour\Assets\be premium bodrum\be-otel-havuz.jpeg" />
+    <Content Include="BIBTour\Assets\BIBTourCompanyHeader.jpeg" />
+    <Content Include="BIBTour\Assets\blea-tarn-langdale-lake-district.jpg" />
+    <Content Include="BIBTour\Assets\boyalık-beach-hotel cesme\boyalık-dıs-uzak.jpg" />
+    <Content Include="BIBTour\Assets\boyalık-beach-hotel cesme\boyalık-dıs-yakın.jpg" />
+    <Content Include="BIBTour\Assets\boyalık-beach-hotel cesme\boyalık-oda-1.jpg" />
+    <Content Include="BIBTour\Assets\boyalık-beach-hotel cesme\boyalık-oda-2.jpg" />
+    <Content Include="BIBTour\Assets\boyalık-beach-hotel cesme\boyalık-oda-3.jpg" />
+    <Content Include="BIBTour\Assets\Cambridge Chronicles.jpeg" />
+    <Content Include="BIBTour\Assets\CampOtel2.jpg" />
+    <Content Include="BIBTour\Assets\CampOtel4.jpg" />
+    <Content Include="BIBTour\Assets\Campotel5.jpg" />
+    <Content Include="BIBTour\Assets\Desktop - 1 %284%29.svg" />
+    <Content Include="BIBTour\Assets\Desktop - 1 %285%29.svg" />
+    <Content Include="BIBTour\Assets\Dublin Delicacies.jpg" />
+    <Content Include="BIBTour\Assets\DUBLIN4.jpg" />
+    <Content Include="BIBTour\Assets\ENCHANTING.jpg" />
+    <Content Include="BIBTour\Assets\England.jpg" />
+    <Content Include="BIBTour\Assets\face1.jpg" />
+    <Content Include="BIBTour\Assets\face2.jpg" />
+    <Content Include="BIBTour\Assets\face3.jpg" />
+    <Content Include="BIBTour\Assets\family.jpg" />
+    <Content Include="BIBTour\Assets\galler.jpg" />
+    <Content Include="BIBTour\Assets\Highland Havens In Scotland.jpg" />
+    <Content Include="BIBTour\Assets\Historical Adventures In Oxford.jpg" />
+    <Content Include="BIBTour\Assets\holiday.jpg" />
+    <Content Include="BIBTour\Assets\holy-trinity-church-from-river.tmb-gal-670.jpg" />
+    <Content Include="BIBTour\Assets\honeymoon1.jpg" />
+    <Content Include="BIBTour\Assets\honeymoon2.jpg" />
+    <Content Include="BIBTour\Assets\honeymoon4.jpg" />
+    <Content Include="BIBTour\Assets\honeymoon5.jpg" />
+    <Content Include="BIBTour\Assets\honeymoonhotel3.jpg" />
+    <Content Include="BIBTour\Assets\hotel1.jpg" />
+    <Content Include="BIBTour\Assets\hotel4.jpeg" />
+    <Content Include="BIBTour\Assets\hotel5.jpeg" />
+    <Content Include="BIBTour\Assets\hotel6.jpeg" />
+    <Content Include="BIBTour\Assets\hotel7.jpg" />
+    <Content Include="BIBTour\Assets\hotel8.jpg" />
+    <Content Include="BIBTour\Assets\images\AnadoluKulturGezileri.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeanslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeanslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeanslider3.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeanslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeanslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeantour1.jpg" />
+    <Content Include="BIBTour\Assets\images\caribbeantour3.jpg" />
+    <Content Include="BIBTour\Assets\images\costacruiseslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\costacruiseslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour1.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour2.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour4.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour5.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetour6.jpg" />
+    <Content Include="BIBTour\Assets\images\cruisetours7.jpg" />
+    <Content Include="BIBTour\Assets\images\cultural-tour.jpg" />
+    <Content Include="BIBTour\Assets\images\culturetours_taiwan.jpg" />
+    <Content Include="BIBTour\Assets\images\eastslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\eastslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\eastslider3.jpg" />
+    <Content Include="BIBTour\Assets\images\eastslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\eastslider5.jpeg" />
+    <Content Include="BIBTour\Assets\images\easttour1.jpg" />
+    <Content Include="BIBTour\Assets\images\easttour2.jpg" />
+    <Content Include="BIBTour\Assets\images\easttour3.jpg" />
+    <Content Include="BIBTour\Assets\images\facebook.png" />
+    <Content Include="BIBTour\Assets\images\FlavorTour.jpg" />
+    <Content Include="BIBTour\Assets\images\FlavorTour2.jpg" />
+    <Content Include="BIBTour\Assets\images\FlavorTour3.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodslider3.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodtour.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodtour1.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodtour2.jpg" />
+    <Content Include="BIBTour\Assets\images\francefoodtour3.jpg" />
+    <Content Include="BIBTour\Assets\images\greekfoodtour.jpg" />
+    <Content Include="BIBTour\Assets\images\GreekIslandTour.jpg" />
+    <Content Include="BIBTour\Assets\images\greekslider5.jpeg" />
+    <Content Include="BIBTour\Assets\images\greektour1.jpg" />
+    <Content Include="BIBTour\Assets\images\greektour2.jpg" />
+    <Content Include="BIBTour\Assets\images\greektour3.jpg" />
+    <Content Include="BIBTour\Assets\images\Hero-interest-people.jpg" />
+    <Content Include="BIBTour\Assets\images\indiastreetfoodtour.jpeg" />
+    <Content Include="BIBTour\Assets\images\insta.png" />
+    <Content Include="BIBTour\Assets\images\irelandtour.jpg" />
+    <Content Include="BIBTour\Assets\images\IstanbulFlavorTour.jpg" />
+    <Content Include="BIBTour\Assets\images\Italian-FoodTour.jpg" />
+    <Content Include="BIBTour\Assets\images\italyfoodslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\italyfoodslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\italyfoodslider3.jpeg" />
+    <Content Include="BIBTour\Assets\images\italyfoodslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\italyfoodslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\italyfoodtour2.jpg" />
+    <Content Include="BIBTour\Assets\images\japantour.jpg" />
+    <Content Include="BIBTour\Assets\images\Marmaris-Efes-Turu.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruise2.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruise3.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruiseslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruiseslider3.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruiseslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\medcruiseslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\mexicofoodtour.jpg" />
+    <Content Include="BIBTour\Assets\images\mexicoslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\MexicoTour.jpg" />
+    <Content Include="BIBTour\Assets\images\mexicotour1.jpg" />
+    <Content Include="BIBTour\Assets\images\mexicotour2.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccoslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccoslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccoslider5jpg.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccotour.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccotour1.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccotour2.jpg" />
+    <Content Include="BIBTour\Assets\images\moroccotour3.jpg" />
+    <Content Include="BIBTour\Assets\images\osmanlislider1.png" />
+    <Content Include="BIBTour\Assets\images\osmanlislider3.jpg" />
+    <Content Include="BIBTour\Assets\images\osmanlislider5.jpg" />
+    <Content Include="BIBTour\Assets\images\ottomanslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\ottomantour.jpg" />
+    <Content Include="BIBTour\Assets\images\ottomantour2.jpeg" />
+    <Content Include="BIBTour\Assets\images\riverslider1.jpg" />
+    <Content Include="BIBTour\Assets\images\riverslider2.jpg" />
+    <Content Include="BIBTour\Assets\images\riverslider3.png" />
+    <Content Include="BIBTour\Assets\images\riverslider4.jpg" />
+    <Content Include="BIBTour\Assets\images\riverslider5.jpg" />
+    <Content Include="BIBTour\Assets\images\rivertour2.jpg" />
+    <Content Include="BIBTour\Assets\images\rivertour3.jpg" />
+    <Content Include="BIBTour\Assets\images\taiwantour2.jpeg" />
+    <Content Include="BIBTour\Assets\images\taiwantour3jpg.jpg" />
+    <Content Include="BIBTour\Assets\images\twiter.png" />
+    <Content Include="BIBTour\Assets\images\uzakdogumutfagi.jpg" />
+    <Content Include="BIBTour\Assets\images\whatsapp.png" />
+    <Content Include="BIBTour\Assets\images\world-cultural-tours.jpg" />
+    <Content Include="BIBTour\Assets\instagram.png" />
+    <Content Include="BIBTour\Assets\ireland.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\img2.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\La Bohame kabak oda.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\La bohame kabak oda2.jpeg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\labkimg3.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\labohemakabak4.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\labohemakabak5.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\labohemakabak6.jpg" />
+    <Content Include="BIBTour\Assets\La Boheme Kabak\tsr12320637856297451103440.jpg" />
+    <Content Include="BIBTour\Assets\Logo.png" />
+    <Content Include="BIBTour\Assets\London telephone.jpg" />
+    <Content Include="BIBTour\Assets\LuxuryVoyageTorba.png" />
+    <Content Include="BIBTour\Assets\Majestic Lake District Escapes.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Genel-366749.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Genel-372686.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Genel-381327.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Oda-365300.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Oda-370342.jpg" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Oda-370344.jpg" />
+    <Content Include="BIBTour\Assets\Mıssıon.jpeg" />
+    <Content Include="BIBTour\Assets\oda-ici-1.png" />
+    <Content Include="BIBTour\Assets\oda-ici-2.png" />
+    <Content Include="BIBTour\Assets\oda-ici-3.png" />
+    <Content Include="BIBTour\Assets\OtelCampaign.jpg" />
+    <Content Include="BIBTour\Assets\princess-marin-dis.jpg" />
+    <Content Include="BIBTour\Assets\Rectangle 7.png" />
+    <Content Include="BIBTour\Assets\scotland.jpg" />
+    <Content Include="BIBTour\Assets\Sheckspare.jpg" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\Side-Sun-Hotel-Genel-328777.jpg" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\Side-Sun-Hotel-Oda-328770.jpg" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\Side-Sun-Hotel-Oda-328775.jpg" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Deluxe-Bodrum-Genel-302726.jpg" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Deluxe-Bodrum-Oda-297507.jpg" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Luxury-Collection-Bodrum-Genel-369758.jpg" />
+    <Content Include="BIBTour\Assets\turkey_holiday.jpg" />
+    <Content Include="BIBTour\Assets\uzak-bakım-princess.jpg" />
+    <Content Include="BIBTour\Assets\Vision.jpeg" />
+    <Content Include="BIBTour\Assets\WhatsApp Image 2024-01-02 at 19.43.41.jpeg" />
+    <Content Include="BIBTour\Assets\Whatsapp.png" />
+    <Content Include="BIBTour\Assets\WinterHotel\adb781697e33c679_800x800ar.jpg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda1.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda2.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda3.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda4.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda5.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda6.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda7.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda8.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\oda9.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel1.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel10.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel11.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel12.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel13.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel14.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel15.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel16.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel17.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel18.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel2.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel3.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel4.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel5.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel6.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel7.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel8.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\otel9.jpeg" />
+    <Content Include="BIBTour\Assets\WinterHotel\Riffelalp-Resort-2222m-.jpg" />
+    <Content Include="BIBTour\Assets\X.png" />
+    <Content Include="BIBTour\footerHomepage.css" />
+    <Content Include="BIBTour\index.html" />
+    <Content Include="BIBTour\Pages\aboutUs.html" />
+    <Content Include="BIBTour\Pages\aboutUsPage.html" />
+    <Content Include="BIBTour\Pages\antalyaOzkaymakHotel.html" />
+    <Content Include="BIBTour\Pages\BePremiumBodrum.html" />
+    <Content Include="BIBTour\Pages\boyalikBeachHotel.html" />
+    <Content Include="BIBTour\Pages\CampaingOtels.html" />
+    <Content Include="BIBTour\Pages\CampOtels.js" />
+    <Content Include="BIBTour\Pages\contactUs.html" />
+    <Content Include="BIBTour\Pages\dedemanKartepeKocaeli.html" />
+    <Content Include="BIBTour\Pages\faq.css" />
+    <Content Include="BIBTour\Pages\faq.js" />
+    <Content Include="BIBTour\Pages\faqpage.html" />
+    <Content Include="BIBTour\Pages\honeyMoonHotels.html" />
+    <Content Include="BIBTour\Pages\KayaPalazzoSki&amp;MountainResort.html" />
+    <Content Include="BIBTour\Pages\laBohameKabak.html" />
+    <Content Include="BIBTour\Pages\login.css" />
+    <Content Include="BIBTour\Pages\login.html" />
+    <Content Include="BIBTour\Pages\login.js" />
+    <Content Include="BIBTour\Pages\LuxuryVoyageTorba.css" />
+    <Content Include="BIBTour\Pages\LuxuryVoyageTorba.html" />
+    <Content Include="BIBTour\Pages\maxxRoyalBelekGolfResort.html" />
+    <Content Include="BIBTour\Pages\path\to\font-awesome\css\font-awesome.min.css" />
+    <Content Include="BIBTour\Pages\Purchase.css" />
+    <Content Include="BIBTour\Pages\purchase.html" />
+    <Content Include="BIBTour\Pages\ScriptSlider.js" />
+    <Content Include="BIBTour\Pages\Scroll.js" />
+    <Content Include="BIBTour\Pages\SideSunHotel.html" />
+    <Content Include="BIBTour\Pages\StyleAbout.css" />
+    <Content Include="BIBTour\Pages\StyleCampaignOtels.css" />
+    <Content Include="BIBTour\Pages\StyleContact.css" />
+    <Content Include="BIBTour\Pages\Succesfull.css" />
+    <Content Include="BIBTour\Pages\successfull.html" />
+    <Content Include="BIBTour\Pages\TheErzurumHotel.html" />
+    <Content Include="BIBTour\Pages\titanicDeluxeBodrum.html" />
+    <Content Include="BIBTour\Pages\Tours\CampsOtels.js" />
+    <Content Include="BIBTour\Pages\Tours\CostaCruise.html" />
+    <Content Include="BIBTour\Pages\Tours\CruiseTours.html" />
+    <Content Include="BIBTour\Pages\Tours\CultureTours.html" />
+    <Content Include="BIBTour\Pages\Tours\FarEasternCuisine.html" />
+    <Content Include="BIBTour\Pages\Tours\FlavorTours.html" />
+    <Content Include="BIBTour\Pages\Tours\FranceFlavorTour.html" />
+    <Content Include="BIBTour\Pages\Tours\GreekTour.html" />
+    <Content Include="BIBTour\Pages\Tours\index.html" />
+    <Content Include="BIBTour\Pages\Tours\index2.html" />
+    <Content Include="BIBTour\Pages\Tours\index3.html" />
+    <Content Include="BIBTour\Pages\Tours\IstanbulFoodTour.html" />
+    <Content Include="BIBTour\Pages\Tours\IstanbulOttomanTour.html" />
+    <Content Include="BIBTour\Pages\Tours\ItalyFlavorTour.html" />
+    <Content Include="BIBTour\Pages\Tours\LuxuryVoyageTorba.css" />
+    <Content Include="BIBTour\Pages\Tours\MediterraneanTours.html" />
+    <Content Include="BIBTour\Pages\Tours\MexicoTour.html" />
+    <Content Include="BIBTour\Pages\Tours\MoroccoTour.html" />
+    <Content Include="BIBTour\Pages\Tours\RiverTours.html" />
+    <Content Include="BIBTour\Pages\Tours\RoyalCaribbeanTours.html" />
+    <Content Include="BIBTour\Pages\Tours\Script.js" />
+    <Content Include="BIBTour\Pages\Tours\ScriptT.js" />
+    <Content Include="BIBTour\Pages\Tours\Style.css" />
+    <Content Include="BIBTour\Pages\Tours\Style1.css" />
+    <Content Include="BIBTour\Pages\Tours\StyleCampaignOtels.css" />
+    <Content Include="BIBTour\Pages\Tours\TaiwanTour.html" />
+    <Content Include="BIBTour\Pages\uludagKayaHotel.html" />
+    <Content Include="BIBTour\Pages\winterhotel.html" />
+    <Content Include="BIBTour\Script.js" />
+    <Content Include="BIBTour\Style.css" />
+    <Content Include="Content\login.css" />
+    <Content Include="Content\Style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="BIBTour\.vscode\launch.json" />
+    <Content Include="BIBTour\Assets\eye-line-art-icon-black-260nw-1805810968.webp" />
+    <Content Include="BIBTour\Assets\hotel3.webp" />
+    <Content Include="BIBTour\Assets\images\caribbeantour2.webp" />
+    <Content Include="BIBTour\Assets\images\costacruise1.webp" />
+    <Content Include="BIBTour\Assets\images\costacruise2.webp" />
+    <Content Include="BIBTour\Assets\images\costacruise3.avif" />
+    <Content Include="BIBTour\Assets\images\costacruiseslider1.webp" />
+    <Content Include="BIBTour\Assets\images\costacruiseslider2.webp" />
+    <Content Include="BIBTour\Assets\images\costacruiseslider3.webp" />
+    <Content Include="BIBTour\Assets\images\cruisetour3webp.webp" />
+    <Content Include="BIBTour\Assets\images\francefoodslider4.webp" />
+    <Content Include="BIBTour\Assets\images\francefoodslider5.webp" />
+    <Content Include="BIBTour\Assets\images\french-food-ratatouille.webp" />
+    <Content Include="BIBTour\Assets\images\greekslider1.webp" />
+    <Content Include="BIBTour\Assets\images\greekslider2.webp" />
+    <Content Include="BIBTour\Assets\images\greekslider3.webp" />
+    <Content Include="BIBTour\Assets\images\greekslider4.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodslider.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodslider2.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodslider3.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodslider5.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodtour.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodtour2.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulfoodtour3.webp" />
+    <Content Include="BIBTour\Assets\images\istanbulslider4.webp" />
+    <Content Include="BIBTour\Assets\images\italyfoodtour1.webp" />
+    <Content Include="BIBTour\Assets\images\italyfoodtour3.webp" />
+    <Content Include="BIBTour\Assets\images\medcruise1.webp" />
+    <Content Include="BIBTour\Assets\images\medcruiseslider1.avif" />
+    <Content Include="BIBTour\Assets\images\mexicoslider1.webp" />
+    <Content Include="BIBTour\Assets\images\mexicoslider2.webp" />
+    <Content Include="BIBTour\Assets\images\mexicoslider3.webp" />
+    <Content Include="BIBTour\Assets\images\mexicoslider4.webp" />
+    <Content Include="BIBTour\Assets\images\mexicotour3.webp" />
+    <Content Include="BIBTour\Assets\images\moroccoslider2.webp" />
+    <Content Include="BIBTour\Assets\images\moroccoslider3.webp" />
+    <Content Include="BIBTour\Assets\images\osmanlislider2.webp" />
+    <Content Include="BIBTour\Assets\images\ottomantour1.webp" />
+    <Content Include="BIBTour\Assets\images\ottomantour3.webp" />
+    <Content Include="BIBTour\Assets\images\rivertour1.webp" />
+    <Content Include="BIBTour\Assets\images\taiwanslider1.webp" />
+    <Content Include="BIBTour\Assets\images\taiwanslider2.webp" />
+    <Content Include="BIBTour\Assets\images\taiwanslider3.webp" />
+    <Content Include="BIBTour\Assets\images\taiwanslider4.webp" />
+    <Content Include="BIBTour\Assets\images\taiwanslider5.webp" />
+    <Content Include="BIBTour\Assets\images\taiwantour1.webp" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Genel-365563.webp" />
+    <Content Include="BIBTour\Assets\Maxx RoyalBelekGolfResort\Maxx-Royal-Belek-Golf-Resort-Genel-372674.webp" />
+    <Content Include="BIBTour\Assets\OtelCamp3.webp" />
+    <Content Include="BIBTour\Assets\otelimgslider1.avif" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\gen--3-.webp" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\Side-Sun-Hotel-Genel-80316.webp" />
+    <Content Include="BIBTour\Assets\Side Sun Hotel\Side-Sun-Hotel-Oda-328774.webp" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Deluxe-Bodrum-Genel-285761.webp" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Deluxe-Bodrum-Oda-285780.webp" />
+    <Content Include="BIBTour\Assets\Titanic Deluxe Bodrum\Titanic-Deluxe-Bodrum-Oda-285802.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\dedemanHotel\dedemankartepekocaeli2aeacbbb.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\dedemanHotel\dedemankartepekocaeli38237be2.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\dedemanHotel\doubletree-by-hilton-kocaeli-273e5ca2.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\dedemanHotel\doubletree-by-hilton-kocaeli-447e2333.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\dedemanHotel\doubletree-by-hilton-kocaeli-48fb68fa.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-1178893434.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-1870349.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-1870387.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-1870500.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-oda1.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\Kaya Palazzo Ski &amp; Mountain Resort\kaya-palazzo-ski-moutain-resort-oda2.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-5566e939.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-619f4449.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-b19acc70.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-bff6b342.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-e4180aa7.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\KayaHotel\kaya-uludag-oda.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The Erzurum Hotel\theerzurumhotel0c6d00a4.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The Erzurum Hotel\theerzurumhotel1.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The Erzurum Hotel\theerzurumhotel3289cf65.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The Erzurum Hotel\theerzurumhotel81673fb7.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The Erzurum Hotel\theerzurumhoteloda3.webp" />
+    <Content Include="BIBTour\Assets\WinterHotel\The-Arrabelle-at-Vail-Square.webp" />
+    <Content Include="BIBTour\Pages\CampaignOtels.cshtml" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage1.cshtml" />
+    <Content Include="Views\User\LogIn.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Home\CampaignHotels.cshtml" />
+    <Content Include="Views\Home\HoneymoonHotels.cshtml" />
+    <Content Include="Views\Home\WinterHotels.cshtml" />
+    <Content Include="Views\Home\CruiseTours.cshtml" />
+    <Content Include="Views\Home\CultureTours.cshtml" />
+    <Content Include="Views\Home\FlavorTours.cshtml" />
+    <Content Include="Views\User\Successfull.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Admin\contentView.cshtml" />
+    <Content Include="Views\Home\Purchase.cshtml" />
+    <Content Include="Views\Home\FaqPage.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60346</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44396/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

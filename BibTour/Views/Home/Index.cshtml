@@ -1,0 +1,367 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet" href="~/BIBTour/footerHomepage.css">
+
+
+    <title>BIBTour | Home</title>
+
+    <link rel="stylesheet"
+          href="path/to/font-awesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+</head>
+<body>
+
+    <header>
+        @section script{
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const hamburgerMenu = document.getElementById("hamburger-menu");
+                    const navbarList = document.querySelector(".navbar-list");
+
+                    hamburgerMenu.addEventListener("click", function () {
+                        navbarList.classList.toggle("show");
+                    });
+                });</script>
+
+
+            <script>
+
+                document.querySelectorAll('a.linka').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+
+                        if (targetElement) {
+                            const offset = 120;
+                            const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                            window.scrollTo({
+                                top: targetPosition - offset,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                flatpickr(".datepicker", {
+                    mode: "range",
+                    dateFormat: "Y-m-d",
+                    minDate: "today",
+                });
+
+            </script>
+        }
+
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <script src="~/BIBTour/Script.js"></script>
+    <div class="progress"></div>
+    <div class="hero">
+        <div class="title">
+            <h1>WELCOME TO</h1>
+            <div class="back-text">
+                <span>B</span>
+                <span>I</span>
+                <span>B</span>
+                <span>T</span>
+                <span>O</span>
+                <span>U</span>
+                <span>R</span>
+            </div>
+        </div>
+    </div>
+    <div id="scrollButton">
+        <a href="#toPopularPlaces">Let's find the most suitable holiday for you together</a>
+    </div>
+
+    <div id="downArrow">
+        <i class="fas fa-chevron-down" style="font-size: 48px; color: white"></i>
+    </div>
+    <div id="firstSelect">
+        <div class="wrapper">
+
+
+            <div id="toPopularPlaces">
+
+
+                <a class="linka" href="#container"><h3>View Our popular places <i class="fas fa-mouse-pointer"></i></h3></a>
+            </div>
+
+
+            <script src="~/BIBTour/Pages/ScriptSlider.js"></script>
+            <div class="containers" id="container">
+
+                <div class="slide">
+
+
+                    <div class="item" style="background-image: url('../BIBTour/Assets/England.jpg');">
+                        <div class="content">
+                            <div class="name">England</div>
+                            <div class="des">Explore the Charm of England: Exclusive Tour Packages</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/scotland.jpg');">
+                        <div class="content">
+                            <div class="name">Scotland</div>
+                            <div class="des">Discover Scotland: Unmissable Deals on Scottish Tours!</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/Dublin Delicacies.jpg');">
+                        <div class="content">
+                            <div class="name">Wales Wonders</div>
+                            <div class="des">Limited-Time Offers on Welsh Adventure Tours!</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/ireland.jpg');">
+                        <div class="content">
+                            <div class="name">Irish Delights</div>
+                            <div class="des">Special Discounts on Tours Across Ireland!</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/London telephone.jpg');">
+                        <div class="content">
+                            <div class="name">London Calling</div>
+                            <div class="des">Exclusive Savings on City Exploration!</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/Cambridge Chronicles.jpeg');">
+                        <div class="content">
+                            <div class="name">Cambridge Chronicles</div>
+                            <div class="des">Uncover the Secrets with Special Tour Deals!</div>
+
+                        </div>
+                    </div>
+                    <div class="item" style="background-image: url('../BIBTour/Assets/Historical Adventures In Oxford.jpg');">
+                        <div class="content">
+                            <div class="name">Historical Adventures in Oxford</div>
+                            <div class="des">Limited-Time Offers on Oxford Tours!</div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+            </div>
+        </div>
+        <div class="counters">
+            <div>
+                <div class="counter">
+                    <h1>
+                        <span data-count="14">0</span>
+                    </h1>
+                    <h3>Tour</h3>
+                </div>
+                <div class="counter">
+                    <h1>
+                        <span data-count="16">0</span>
+                    </h1>
+                    <h3>Otel</h3>
+                </div>
+                <div class="counter">
+                    <h1>
+                        <span data-count="98,57%">0</span>%
+                    </h1>
+                    <h3>Success Rate</h3>
+                </div>
+                <div class="counter">
+                    <h1>
+                        <span data-count="4">0</span>
+                    </h1>
+                    <h3>Years Experience</h3>
+                </div>
+            </div>
+        </div>
+        <div id="testimonials">
+
+            <h2 class="camp-home-header" style="margin-top: 5%; text-align: center; font-size: 50px; color: aliceblue;">testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="../BIBTour/Assets/face1.jpg"
+                             alt="Customer 1" />
+                    </div>
+                    <div class="testimonial-text">
+                        "Our tour guide was incredibly knowledgeable, and the sights
+                        were breathtaking. I highly recommend this tour company!"
+                    </div>
+                    <div class="testimonial-author">John Smith</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="../BIBTour/Assets/face2.jpg"
+                             alt="Customer 2" />
+                    </div>
+                    <div class="testimonial-text">
+                        "The tour was well-organized, and the staff was friendly. It
+                        was a fantastic experience, and I'll definitely travel with
+                        them again!"
+                    </div>
+                    <div class="testimonial-author">Emily Johnson</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="../BIBTour/Assets/face3.jpg"
+                             alt="Customer 3" />
+                    </div>
+                    <div class="testimonial-text">
+                        "I enjoyed every moment of the tour. The guides were amazing,
+                        and the destinations were stunning. I highly recommend it to
+                        anyone looking for a great travel experience!"
+                    </div>
+                    <div class="testimonial-author">David Williams</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

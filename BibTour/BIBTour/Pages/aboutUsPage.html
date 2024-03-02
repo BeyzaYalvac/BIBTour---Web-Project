@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | About Us</title>
+    <link rel="stylesheet" href="../Pages/StyleAbout.css" />
+    <link rel="stylesheet" href="../Style1.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Times New Roman", Times, serif;
+        text-decoration: none;
+        text-transform: capitalize;
+        scroll-behavior: smooth;
+      }
+      :root * {
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: calc(var(--scroll) * -1s);
+        /* These last 2 properites clean up overshoot weirdness */
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+      }
+      .progress {
+        height: 3px;
+        width: 0%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: progress 1s linear;
+      }
+      @keyframes progress {
+        to {
+          background-color: rgb(20, 255, 226);
+          width: 100%;
+        }
+      }
+
+      body {
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+        display: flex;
+        background-color: rgb(49, 55, 64);
+        animation: body 1s linear;
+      }
+
+      @keyframes body {
+        to {
+          background-color: #629bd5;
+        }
+      }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 10000;
+      }
+
+      .navbar ul {
+        list-style: none;
+      }
+      .navbar ul li {
+        padding-bottom: 2%;
+        position: relative;
+        list-style-type: none;
+        display: inline-block;
+        margin: 0 25px;
+      }
+      #signin {
+        color: #1976d2;
+      }
+      #login {
+        color: white;
+        background-color: #1976d2;
+        border-radius: 10px;
+        padding: 10px;
+        right: 1%;
+      }
+      #login a:hover {
+        transform: scale(1.1) !important;
+      }
+      #login a {
+        transition: transform 0.3s ease-out;
+      }
+      .navbar ul li a {
+        font-size: large;
+        text-decoration: none;
+        color: #000000;
+      }
+
+      .navbar ul li a:hover {
+        text-decoration: none;
+        color: #000000;
+        transform: scale(1.2);
+        transition: 0.7s;
+        box-shadow: 0 4px #03a9f4;
+      }
+
+      .navbar ul li a:active {
+        text-decoration: none;
+        color: #1976d2;
+        transform: scale(1.2);
+        transition: 0.2s;
+      }
+
+      .navbar ul li ul {
+        position: absolute;
+        left: 0;
+        width: 200px;
+        top: 75%;
+        display: none;
+      }
+
+      .navbar ul li:hover ul {
+        display: block;
+      }
+
+      .navbar ul li ul li {
+        width: 400px;
+        border-top: 1px solid #ffffff;
+        background-color: #03a9f4;
+        height: 50px;
+        text-align: center;
+        color: white !important;
+        padding-top: 5%;
+      }
+
+      .navbar ul li ul li a {
+        color: white !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../Assets/Logo.png" alt="" />
+        </a>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a class="active" href="../index.html">Homepage</a></li>
+          <li>
+            <a href="#"
+              >Hotel
+              <i
+                class="fas fa-chevron-down"
+                style="font-size: 20px; color: rgb(0, 0, 0)"
+              ></i
+            ></a>
+
+            <ul class="submenu">
+              <li>
+                <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+              </li>
+              <li>
+                <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+              </li>
+              <li>
+                <a href="../Pages/winterhotel.html">Winter Hotels</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#"
+              >Tour
+              <i
+                class="fas fa-chevron-down"
+                style="font-size: 20px; color: rgb(0, 0, 0)"
+              ></i
+            ></a>
+            <ul class="submenu">
+              <li>
+                <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+              </li>
+              <li>
+                <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+              </li>
+              <li>
+                <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../Pages/faqpage.html">F.A.Q.</a></li>
+          <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+          <li><a href="../Pages/contactUs.html">Contact</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="headerofaboutus"><h1>BIBTOUR</h1></div>
+    <div class="whoweare">
+      <h1>Who We Are</h1>
+      <p class="glass">
+        Welcome to BIBTour, where every journey is an adventure waiting to be
+        unfolded. As passionate travel enthusiasts, we believe that exploration
+        is not just a destination; it's a lifestyle. At BIBTour, we curate
+        extraordinary travel experiences that go beyond the ordinary, offering
+        you the chance to discover the world in a way that stays with you
+        forever.
+      </p>
+    </div>
+
+    <div class="whychooseheader">
+      <h2>Why Choose BIBTour?</h2>
+      <h3 data-text="Unforgettable Destinations">Unforgettable Destinations</h3>
+      <p>
+        From the sun-kissed beaches to the snow-capped mountains, BIBTour takes
+        you to the most breathtaking destinations around the globe. Whether you
+        seek cultural immersion, natural wonders, or thrilling adventures, we
+        have the perfect itinerary for you.
+      </p>
+      <h3 data-text="Tailored Experiences">Tailored Experiences</h3>
+      <p>
+        We understand that every traveler is unique. That's why our team crafts
+        personalized itineraries to cater to your preferences and interests.
+        Your journey with BIBTour is not just a vacation; it's a tailor-made
+        experience designed exclusively for you.
+      </p>
+      <h3 data-text="Comfort and Quality">Comfort and Quality</h3>
+      <p>
+        We prioritize your comfort and satisfaction. Our carefully selected
+        accommodations, transportation, and tour guides ensure that you
+        experience the highest quality throughout your trip. Relax and enjoy the
+        journey while we take care of the details.
+      </p>
+      <h3 data-text="Passionate Team">Passionate Team</h3>
+      <p>
+        Our team is driven by a shared love for travel. We are dedicated to
+        providing you with exceptional service, making every moment of your trip
+        special. From planning to execution, we are committed to exceeding your
+        expectations.
+      </p>
+    </div>
+    <div class="whyChoosecontainer">
+      <div class="whychoose">
+        <div class="container">
+          <h1 style="text-align: center; color: azure">Our Mission</h1>
+          <div class="card">
+            <div class="front"></div>
+            <div class="back">
+              <p>
+                At BIBTour, our mission is to inspire and facilitate
+                transformative travel experiences that leave a lasting impact on
+                the lives of our clients. We are dedicated to curating
+                exceptional journeys that go beyond conventional tourism,
+                fostering cultural understanding, environmental consciousness,
+                and personal growth. Through meticulous planning, unparalleled
+                service, and a passion for exploration, we strive to make every
+                adventure with BIBTour a journey of discovery, enrichment, and
+                joy.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h1 style="text-align: center; color: azure">Our Vission</h1>
+          <div class="card">
+            <div
+              class="front"
+              style="
+                background-image: url(../Assets/eye-line-art-icon-black-260nw-1805810968.webp);
+                background-size: cover;
+              "
+            ></div>
+            <div class="back">
+              <p>
+                Our vision at BIBTour is to be a leading force in the travel
+                industry, recognized for innovation, excellence, and a
+                commitment to creating meaningful connections between people and
+                places. We envision a world where travel becomes a
+                transformative force for both individuals and fostering global
+                harmony and sustainability. We aim to be the preferred choice
+                for those seeking authentic, immersive, life-enriching travel
+                experiences. BIBTour is not just a travel company; it's a
+                catalyst for a world united by the love of exploration and
+                understanding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.5518644737176!2d28.829560475984238!3d40.99129277135292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa35ee1fdc1b1%3A0x658a212e6b4359b5!2zVC5DLiDEsHN0YW5idWwgS8O8bHTDvHIgw5xuaXZlcnNpdGVzaQ!5e0!3m2!1str!2str!4v1703782319391!5m2!1str!2str"
+      width="100%"
+      height="450"
+      style="border: 0; justify-content: center"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

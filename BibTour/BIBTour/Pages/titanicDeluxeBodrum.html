@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Titanic Deluxe Bodrum</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" /> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+
+    <div class="container">
+      <div class="image">
+        <img
+          src="../Assets/Titanic Deluxe Bodrum/Titanic-Deluxe-Bodrum-Genel-302726.jpg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel3.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/Titanic Deluxe Bodrum/Titanic-Luxury-Collection-Bodrum-Genel-369758.jpg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel4.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel5.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Titanic Deluxe Bodrum</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Titanic Deluxe Hotel: Where Luxury Knows No Bounds
+      </div>
+      Nestled in a prime location, Titanic Deluxe Hotel stands as a beacon of
+      luxury. With its opulent architecture, lush surroundings, and a commitment
+      to unparalleled service, the hotel offers an extraordinary escape for
+      those seeking the epitome of grandeur.
+      <div class="h2ofcontainerexp">
+        Luxurious Accommodations: A Haven of Comfort
+      </div>
+      Step into a haven of comfort with Titanic Deluxe Hotel's luxurious
+      accommodations. Each room is meticulously designed, blending modern
+      elegance with timeless charm. Guests can expect a restful retreat
+      surrounded by sophisticated decor and top-notch amenities.
+      <div class="h2ofcontainerexp">
+        Gourmet Dining: Culinary Excellence at Every Bite
+      </div>
+      Indulge in culinary excellence at Titanic Deluxe Hotel's array of gourmet
+      dining options. From international flavors to local delicacies, the
+      hotel's restaurants promise a gastronomic journey for even the most
+      discerning palates
+      <div class="h2ofcontainerexp">
+        Spa and Wellness: Rejuvenate Your Senses
+      </div>
+      The spa at Titanic Deluxe Hotel is a sanctuary of relaxation and
+      rejuvenation. Professional therapists, state-of-the-art facilities, and a
+      comprehensive menu of treatments ensure that guests leave feeling
+      refreshed and revitalized.
+      <div class="h2ofcontainerexp">
+        Poolside Paradise: Soak Up the Sun in Style
+      </div>
+      Relax by the poolside and soak up the sun in style at Titanic Deluxe
+      Hotel. The expansive pool area, surrounded by lush landscaping, provides a
+      tranquil setting for guests to unwind and enjoy the epitome of leisure.
+      <div class="h2ofcontainerexp">
+        Events and Conferences: Unforgettable Celebrations
+      </div>
+      For those planning events or conferences, Titanic Deluxe Hotel offers
+      versatile spaces equipped with modern amenities. Whether it's a grand
+      celebration or a corporate gathering, the hotel ensures a seamless and
+      memorable experience.
+      <div class="h2ofcontainerexp">
+        Prime Location: Accessibility and Exploration
+      </div>
+      Conveniently located, Titanic Deluxe Hotel provides easy access to local
+      attractions and cultural sites. Guests can explore the vibrant
+      surroundings, enjoying the perfect balance between a tranquil retreat and
+      the excitement of nearby attractions.
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda1.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Deluxe Sea View Room - Tranquil Elegance
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$129,99</h5>
+              <p class="card-address">
+                Experience tranquility and elegance in our Deluxe Sea View Room.
+                Offering breathtaking views of the surrounding landscape, this
+                room provides a serene escape with modern amenities and
+                luxurious furnishings.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 60 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda2.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Grand Suite - Opulent Retreat</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$110</h5>
+              <p class="card-address">
+                Indulge in opulence with our Grand Suite. This expansive retreat
+                features separate living and sleeping areas, exuding a sense of
+                grandeur. Immerse yourself in luxury with personalized services
+                and stunning decor.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/Titanic Deluxe Bodrum/Titanic-Deluxe-Bodrum-Oda-297507.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Family Room - Spacious Comfort</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$158</h5>
+              <p class="card-address">
+                Our Family Room is designed to provide spacious comfort for the
+                entire family. With thoughtfully arranged sleeping arrangements
+                and a cozy ambiance, it ensures a delightful stay for families
+                seeking both luxury and convenience.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

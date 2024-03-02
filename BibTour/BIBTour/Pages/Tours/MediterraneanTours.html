@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Boyalık Beach Hotel</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img src="../../Assets/images/medcruiseslider1.avif" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/medcruiseslider2.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/medcruiseslider3.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/medcruiseslider4.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/medcruiseslider5.jpg" alt="" />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Mediterranean Tours</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">Mediterranean Tours</div>
+      Embark on a breathtaking journey through history, culture, and natural
+      wonders with our Mediterranean Cruise Tours.
+      <div class="h2ofcontainerexp">Cultural Odyssey</div>
+      OAboard our luxurious ships, you'll experience the allure of the
+      Mediterranean, where ancient civilizations meet the azure sea.
+      <div class="h2ofcontainerexp">Island Paradises</div>
+      Let every port of call be a gateway to exploration, and every sunset on
+      the open sea a moment of pure serenity.
+      <div class="h2ofcontainerexp">Tour Highlights:</div>
+      <ol>
+        <li>
+          Iconic Landmarks: Explore renowned landmarks such as the Eiffel Tower,
+          the Colosseum, and the Great Wall of China.
+        </li>
+        <li>
+          Cultural Immerse: Immerse yourself in local cultures through visits to
+          traditional markets, cultural performances, and authentic dining
+          experiences.
+        </li>
+        <li>
+          Natural Wonders: Witness breathtaking natural landscapes, from the
+          majestic Grand Canyon to the serene beauty of the Swiss Alps.
+        </li>
+        <li>
+          Historical Treasures: Step back in time with visits to historical
+          sites like Machu Picchu, the Pyramids of Giza, and ancient temples in
+          Kyoto
+        </li>
+        <li>
+          Adventure Activities: Experience adrenaline-pumping adventures, from
+          zip-lining in Costa Rica to hot air ballooning over Cappadocia..
+        </li>
+      </ol>
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Tour Participation Options</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/medcruise1.webp"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Ultra All-Inclusive Tour Participation
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$2600</h5>
+              <p class="card-address">
+                Embark on the epitome of luxury and indulgence with our Ultra
+                All-Inclusive Mediterranean Cruise.
+              </p>
+              <p class="card-details">
+                VIP access &middot; Michelin-starred Restaurants &middot;
+                Premium Accommodation
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/medcruise2.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">All-Inclusive Tour Participation</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$2300</h5>
+              <p class="card-address">
+                This comprehensive package includes premium accommodations,
+                diverse culinary experiences, and a spectrum of activities at
+                every port.
+              </p>
+              <p class="card-details">
+                Guided Tours &middot; Delightful Meals &middot; Hassle-free
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/medcruise3.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Standard Participation</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$2000</h5>
+              <p class="card-address">
+                This option provides essential accommodations and access to key
+                activities, allowing you to experience the beauty of the
+                Mediterranean without compromising on the essence of
+                exploration.
+              </p>
+              <p class="card-details">
+                Public Life &middot; Snacks &middot; Self Guided
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="../../Pages/faqpage.html">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

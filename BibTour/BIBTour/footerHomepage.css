@@ -1,0 +1,72 @@
+footer {
+  color: #000;
+  height: 30vh;
+  background: linear-gradient(to bottom, #629bd5, #92d5f3);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  top: 365%;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+  padding-top: 2%;
+  margin: 2%;
+}
+
+.footer-container ul {
+  list-style: none;
+  font-size: 20px;
+  padding: 0; /* Remove default padding on ul */
+  margin: 0; /* Remove default margin on ul */
+}
+
+.footer-container ul li {
+  text-decoration: none;
+}
+
+.footer-container ul li a {
+  color: #2d2d2d;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3%;
+}
+
+.icon {
+  height: 5vh;
+  margin: 0 10px;
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #e4405f;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+}
+
+.close:hover {
+  color: #777;
+}
+
+.social-media {
+  margin-top: auto; /* Push the social-media div to the bottom */
+  align-items: stretch;
+}
+
+.slogan {
+  color: #000;
+  padding-top: 2%;
+  font-size: 20px;
+}

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Side Sun Hotel</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img src="../Assets/WinterHotel/otel6.jpeg" alt="" />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/Side Sun Hotel/Side-Sun-Hotel-Genel-328777.jpg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel7.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/Side Sun Hotel/Side-Sun-Hotel-Oda-328770.jpg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/Side Sun Hotel/Side-Sun-Hotel-Oda-328775.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Side Sun Hotel</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Side Sun Hotel: Your Gateway to Coastal Bliss
+      </div>
+      Welcome to Side Sun Hotel, an exquisite retreat situated in the heart of
+      Side, where luxury meets the serene beauty of the Turkish coastline. Our
+      hotel is dedicated to providing a personalized and memorable experience,
+      offering a range of thoughtfully designed rooms to cater to every guest's
+      unique preferences.
+      <div class="h2ofcontainerexp">
+        Location and Atmosphere: A Coastal Oasis
+      </div>
+      Nestled in the charming town of Side, our hotel is a haven of tranquility
+      where the azure waters of the Mediterranean meet the historic allure of
+      the region. The atmospheric surroundings, complemented by our commitment
+      to hospitality, create the perfect setting for a memorable getaway.
+      <div class="h2ofcontainerexp">
+        Breathtaking Sea Views: Sea View Deluxe Rooms
+      </div>
+      The Sea View Deluxe Rooms redefine the concept of coastal living. Each
+      room is carefully designed to maximize panoramic views of the sea,
+      allowing guests to wake up to the gentle sounds of waves and enjoy
+      spectacular sunsets from the comfort of their private retreat.
+      <div class="h2ofcontainerexp">
+        Family-Friendly Luxury: The Family Suites
+      </div>
+      Recognizing the importance of family vacations, our Family Suites provide
+      spacious and luxurious accommodations. With separate living areas, these
+      suites offer the perfect balance of comfort and convenience, ensuring that
+      families can create lasting memories together.
+
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/Side Sun Hotel/Side-Sun-Hotel-Oda-328770.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">The Honeymoon Suites</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$784,99</h5>
+              <p class="card-address">
+                Experience the epitome of romance and luxury in our exclusive
+                Serenade Suite, designed for honeymooners seeking an enchanting
+                escape. Nestled within Side Sun Hotel's serene ambiance, the
+                Serenade Suite promises an unforgettable journey into marital
+                bliss.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 89 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda3.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Horizon Suites: Panoramic Perfection
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$105</h5>
+              <p class="card-address">
+                Unveiling our Horizon Suites, a sanctuary of panoramic
+                perfection. These premium sea-view retreats redefine luxury with
+                unparalleled views of the Mediterranean. Immerse yourself in
+                sophistication and comfort, where every moment is adorned with
+                the beauty of the horizon.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/Side Sun Hotel/Side-Sun-Hotel-Oda-328775.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Connecting Suites with Play Area: Family-Friendly Fun
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$247</h5>
+              <p class="card-address">
+                Perfect for families, our Connecting Suites with Play Area
+                provide a spacious and playful environment for both parents and
+                children. Enjoy the convenience of interconnected suites along
+                with a dedicated play zone, ensuring a delightful
+                family-friendly stay.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

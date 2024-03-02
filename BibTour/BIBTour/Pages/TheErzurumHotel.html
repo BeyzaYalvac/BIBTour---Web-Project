@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | The Erzurum Hotel</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel16.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel17.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel18.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel15.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">The Erzurum Hotel</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Rich History, Modern Comfort: The Erzurum Hotel
+      </div>
+      The Erzurum Hotel stands as a prestigious establishment, seamlessly
+      blending Erzurum's rich historical tapestry with modern comforts.
+      Respecting the architectural heritage, the hotel provides guests with
+      contemporary facilities, ensuring a memorable stay that captures the
+      essence of both the past and the present.
+      <div class="h2ofcontainerexp">
+        Comfortable Accommodations: Rooms and Suites
+      </div>
+      Our hotel offers a range of spacious rooms and suites, each thoughtfully
+      designed to meet every guest's needs. Modern aesthetics, comfortable
+      furnishings, and carefully selected details define each room, ensuring
+      both comfort and elegance.
+      <div class="h2ofcontainerexp">
+        City-View Restaurant: Culinary Excellence with a View
+      </div>
+      Perched atop the hotel, our rooftop restaurant delivers an unforgettable
+      dining experience with flavors inspired by both local and international
+      cuisines. Enjoy a delightful evening on our terrace with panoramic city
+      views, indulging in the pinnacle of culinary delight.
+      <div class="h2ofcontainerexp">
+        Meeting and Event Spaces: Professional Facilities
+      </div>
+      Designed for business travels and events, our meeting rooms are equipped
+      with modern technology, providing a professional atmosphere for successful
+      gatherings. The Erzurum Hotel offers an excellent setting for productive
+      business meetings and events.
+      <div class="h2ofcontainerexp">Health and Sports: Stay Fit and Well</div>
+      Our health and sports facilities provide guests with ample opportunities
+      to stay fit and energized. From a fully-equipped gym to an indoor swimming
+      pool and spa services, we prioritize your well-being throughout your stay.
+      <div class="h2ofcontainerexp">
+        Discovering Erzurum: Culture and History Tour
+      </div>
+      The Erzurum Hotel serves as an ideal starting point for guests eager to
+      explore the history and culture of Erzurum. Its central location ensures
+      easy access to significant tourist and historical sites within the city.
+
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda6.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Triple Room: Spacious Comfort for Three
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$454,99</h5>
+              <p class="card-address">
+                Our Triple Room at The Erzurum Hotel is the perfect choice for a
+                group of three seeking spacious comfort. Thoughtfully arranged
+                to accommodate the needs of multiple guests, this room features
+                ample space and modern conveniences. Enjoy a cozy atmosphere
+                while exploring Erzurum, ensuring a relaxing stay for each
+                member of your trio.
+              </p>
+              <p class="card-details">3Bed &middot; 1 bath &middot; 142 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda8.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Deluxe Double Room: Modern Elegance
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$419,99</h5>
+              <p class="card-address">
+                Step into modern elegance with our Deluxe Double Room at The
+                Erzurum Hotel. The room is tastefully designed, featuring
+                contemporary furnishings and thoughtful details to provide a
+                comfortable and stylish retreat. Whether you're traveling for
+                business or leisure, the Deluxe Double Room offers a serene
+                space to unwind, complete with modern amenities for a delightful
+                stay.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

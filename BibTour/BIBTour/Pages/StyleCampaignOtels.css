@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  text-transform: capitalize;
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+:root {
+  --scroll: 0;
+}
+
+:root * {
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+.progress {
+  height: 3px;
+  width: 0%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: progress 1s linear;
+}
+@keyframes progress {
+  to {
+    background-color: rgb(20, 255, 226);
+    width: 100%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  background-color: rgb(49, 55, 64);
+  animation: body 1s linear;
+}
+
+@keyframes body {
+  to {
+    background-color: #629bd5;
+  }
+}
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  background-size: 300% 300%;
+}
+
+::selection {
+  color: white;
+  background-color: blueviolet;
+}
+
+.carousell {
+  position: relative;
+  width: 95%;
+  height: 85vh;
+  margin-top: 5%;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1em;
+  color: aquamarine;
+  line-height: 1.5;
+  background-color: beige;
+  box-shadow: 0 40px 40px -20px black;
+}
+
+.carousell .img-list {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: calc(100% * 3);
+  height: 100%;
+  transition: 500ms;
+}
+
+.carousell .img-list img {
+  float: left;
+  width: calc(100% / 3);
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousell .content {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  padding-bottom: 75px;
+}
+
+.carousell .text-content {
+  position: absolute;
+  bottom: 120px;
+  width: calc(100%-100px);
+  margin-right: 2%;
+  line-height: 1.2;
+  color: azure;
+  background-color: #79c9eb9e;
+  border-radius: 15px;
+  padding: 1%;
+}
+
+.carousell h2 {
+  font-size: 3em;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.carousell p {
+  font-weight: 400;
+}
+
+.carousell .btn-section {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 200;
+  width: fit-content;
+}
+
+.carousell .caro-btn {
+  width: 25px;
+  height: 5px;
+  margin: 0 4px;
+  background-color: rgb(68, 150, 221);
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.carousell .caro-btn:first-child {
+  background-color: white;
+}
+
+.carousell .caro-btn:hover {
+  background-color: white;
+}
+
+@media only screen and (max-width: 370px) {
+  .carousell .content {
+    padding: 25px;
+  }
+  .carousell h2 {
+    font-size: 2.5em;
+  }
+}
+
+.otel-card {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardO {
+  background-color: #eee9e9;
+  box-shadow: 0 0 0.9375em black;
+  width: 70%;
+
+  display: flex;
+}
+
+.card-hero {
+  flex: 0 0 50%;
+  position: relative;
+}
+
+.card-content {
+  flex: 1;
+  padding: 35px 35px 25px 35px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  display: block;
+  width: 100%;
+}
+
+.card-middle {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card-middle-text {
+  background-color: #ffffff;
+  color: #1c4c60;
+  font-size: 17.5px;
+  font-weight: 700;
+  border-radius: 2px;
+  padding: 10px 17px;
+  box-shadow: 0 0 0.9357px black;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+}
+
+.card-price {
+  font-weight: 700;
+
+  letter-spacing: 1px;
+  font-size: 40px;
+  margin-bottom: 8px;
+  color: #6940d1;
+}
+
+.card-address {
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 8px;
+  color: #245d75;
+}
+
+.card-details {
+  font-size: 25px;
+  margin-top: 5%;
+  font-weight: 400;
+  color: #309dc8;
+  text-align: center;
+}
+
+.card-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-btnn {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  background-color: #1b617c;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card-btnn:hover {
+  border-bottom: 1px solid transparent;
+}
+
+.card-btnn:not(:last-child) {
+  margin-right: 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  /* Fotoğraf üstte, açıklama ve diğer içerikler altta düzeni */
+  .card-hero {
+    flex-direction: row; /* Dikey sıralamayı etkinleştir */
+  }
+
+  .card-content {
+    padding-top: 20px; /* Diğer içerikleri aşağı iterek boşluk bırak */
+  }
+}

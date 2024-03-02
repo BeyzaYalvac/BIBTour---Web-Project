@@ -1,0 +1,247 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&family=Titillium+Web:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Purchase.css" />
+    <link rel="stylesheet" href="../Style.css" />
+    <title>Purchase</title>
+  </head>
+
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+      <nav class="navbar">
+        <a href="../index.html" class="logo">
+          <img src="../Assets/Logo.png" alt="" />
+        </a>
+
+        <div class="hamburger-menu" id="hamburger-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="navbar-list">
+          <li><a class="active" href="../index.html">Homepage</a></li>
+          <li>
+            <a href="#"
+              >Hotel
+              <i
+                class="fas fa-chevron-down"
+                style="font-size: 20px; color: rgb(0, 0, 0)"
+              ></i
+            ></a>
+
+            <ul class="submenu">
+              <li>
+                <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+              </li>
+              <li>
+                <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+              </li>
+              <li>
+                <a href="../Pages/winterhotel.html">Winter Hotels</a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#"
+              >Tour
+              <i
+                class="fas fa-chevron-down"
+                style="font-size: 20px; color: rgb(0, 0, 0)"
+              ></i
+            ></a>
+            <ul class="submenu">
+              <li>
+                <a href="../BIBTour/Pages/Tours/CruiseTours.html"
+                  >Cruise Tours</a
+                >
+              </li>
+              <li>
+                <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+              </li>
+              <li>
+                <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="../Pages/faqpage.html">F.A.Q.</a></li>
+          <li><a href="../Pages/aboutUs.html">About Us</a></li>
+          <li><a href="../Pages/contactUs.html">Contact</a></li>
+          <li>
+            <a href="../Pages/login.html" id="signin">Sign in | Log in</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <h1
+      style="
+        z-index: 5;
+        margin-top: 15%;
+        color: aliceblue;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 55px;
+      "
+    >
+      Purchase
+    </h1>
+    <script>
+      $(function () {
+        $("#start-date").datepicker();
+        $("#end-date").datepicker();
+      });
+    </script>
+    <form id="paymentForm">
+      <div class="datepicker-container">
+        <label for="start-date">Select Start Date:</label>
+        <input type="text" id="start-date" readonly />
+        <label for="end-date">Select End Date:</label>
+        <input type="text" id="end-date" readonly />
+      </div>
+      <label for="cardNumber">Card Number:</label>
+      <input
+        type="text"
+        id="cardNumber"
+        name="cardNumber"
+        required
+      /><br /><br />
+
+      <label for="expirationDate">Expiration Date:</label>
+      <input
+        type="text"
+        id="expirationDate"
+        name="expirationDate"
+        placeholder="MM/YYYY"
+        required
+      /><br /><br />
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" name="cvv" required /><br /><br />
+
+      <input type="button" value="Pay" onclick="goToconfipage()" />
+    </form>
+
+    <script>
+      function validateForm() {
+        var cardNumber = document.getElementById("cardNumber").value;
+        var expirationDate = document.getElementById("expirationDate").value;
+        var cvv = document.getElementById("cvv").value;
+
+        if ((cardNumber !== "") & (expirationDate !== "") & (cvv !== "")) {
+          window.location.href = "confi.html";
+        } else {
+          alert("Please fill in all fields before proceeding.");
+        }
+      }
+
+      function goToconfipage() {
+        window.location.href = "confi.html";
+      }
+    </script>
+
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200";
+      }
+    </script>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li><a href="../Pages/CampaingOtels.html">Campaign Hotels</a></li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li><a href="../Pages/winterhotel.html">Winter Hotels</a></li>
+            <li><a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a></li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li><a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../../BIBTour/Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../../BIBTour/Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../../BIBTour/Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

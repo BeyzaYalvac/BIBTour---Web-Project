@@ -1,0 +1,24 @@
+﻿@model List<BibTour.Models.Messages>
+
+@{ 
+    ViewBag.Title = "contentView";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+ <th>Message</th>     
+    </tr>
+    @foreach (var msg in Model)
+    {
+        <tr>
+            <td>@msg.MessageId</td>
+            <td>@msg.Content</td>
+            <td>
+                <a href="@Url.Action("Delete", "Admin", new { id = msg.MessageId })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

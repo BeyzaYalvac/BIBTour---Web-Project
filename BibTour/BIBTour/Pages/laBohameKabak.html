@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | La Bohame Kabak</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+
+    <div class="container">
+      <div class="image">
+        <img src="../Assets/La Boheme Kabak/img2.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/La Boheme Kabak/labkimg3.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/La Boheme Kabak/labohemakabak4.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/La Boheme Kabak/labohemakabak5.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../Assets/La Boheme Kabak/labohemakabak6.jpg" alt="" />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">La Bohame Kabak Hotel</div>
+
+    <div class="horizontalLine"></div>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Beachside Bliss: Private Beach and Shuttle Service
+      </div>
+      The hotel features a private sandy beach for exclusive guest use. La
+      Boheme Kabak operates on a bed and breakfast basis, ensuring a delightful
+      start to your day. Guests can also enjoy meals at the on-site à la carte
+      restaurant or the open-air restaurant. Dive into the refreshing outdoor
+      pool for a fun and cooling experience.
+
+      <div class="h2ofcontainerexp">
+        Relaxation and Recreation: Massage Services and Bar
+      </div>
+      Indulge in relaxation with massage services offered on-site, allowing you
+      to unwind and rejuvenate. Enjoy pleasant moments at the hotel bar for a
+      delightful time. La Boheme Kabak is conveniently located 60 km from
+      Dalaman Airport, 25 km from Fethiye, and 12 km from Ölüdeniz.
+      <div class="h2ofcontainerexp">
+        Discover Serenity: La Boheme Kabak in Fethiye
+      </div>
+      Nestled in the captivating landscape of Ölüdeniz, La Boheme Kabak invites
+      you to discover serenity by the sea. With its private beach, comfortable
+      accommodations, and refreshing amenities, this hotel provides an
+      unforgettable escape for those seeking both relaxation and adventure.
+
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/La Boheme Kabak/labohemakabak4.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Sea View Suite - Tranquil Luxury</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$124</h5>
+              <p class="card-address">
+                Experience the epitome of luxury in the Sea View Suite, offering
+                breathtaking views of the sea. This spacious suite provides a
+                tranquil retreat for those seeking a serene and rejuvenating
+                experience.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 58 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/La Boheme Kabak/La Bohame kabak oda.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Family Room with Sea View - Perfect for Families
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$143,99</h5>
+              <p class="card-address">
+                The Garden Bungalow immerses guests in nature's embrace,
+                providing a cozy and secluded haven amidst lush greenery. Ideal
+                for those who appreciate a harmonious blend of comfort and
+                natural beauty.
+              </p>
+              <p class="card-details">2 Bed &middot; 1 bath &middot; 45 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/La Boheme Kabak/La bohame kabak oda2.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Double Room with City View - Modern and Stylish
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$119,99</h5>
+              <p class="card-address">
+                Enjoy a refreshing retreat in the Poolside Room, offering direct
+                access to the hotel's outdoor pool. Unwind in comfort and
+                convenience, making the most of your stay at La Boheme Kabak.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 40 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

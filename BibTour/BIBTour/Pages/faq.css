@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif !important;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #25d366; /* backgroundu okumuyor*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+:root {
+  --white: #ffffff;
+  --background: #314eaf;
+  --background-hover: #b4bedfa2;
+  --primary-blue: #00d4f5;
+  --blue-gray: #f4fcff;
+}
+
+body {
+  height: 100%;
+  background-color: var(--blue-gray);
+}
+
+.heading {
+  font-family: "Times New Roman", Times, serif;
+  color: #1976d2;
+  font-size: 30px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 14%;
+  z-index: 1;
+}
+.faq-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 5em;
+  max-width: 90%;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: var(--background);
+}
+
+details {
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 600px;
+  border-radius: 8px;
+  position: relative;
+  max-width: 600px;
+  transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+  background-color: var(--background-hover);
+}
+
+details:hover svg {
+  stroke: var(--primary-blue);
+}
+
+details[open] {
+  background-color: var(--background-hover);
+}
+
+details[open] .faq-title {
+  color: var(--primary-blue);
+}
+
+summary {
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  list-style: none;
+  padding: 1em;
+  align-items: center;
+  width: 600px;
+}
+
+summary svg {
+  stroke: var(--white);
+}
+
+details[open] summary svg {
+  stroke: var(--primary-blue);
+  transform: rotate(90deg);
+}
+
+summary:hover .faq-title {
+  color: var(--primary-blue);
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:focus {
+  outline: none;
+}
+
+.faq-title {
+  color: var(--white);
+  width: 80%;
+  font-size: 20px;
+  transition: all 250ms ease-in-out;
+}
+
+.faq-content {
+  color: var(--white);
+  padding: 0.2em 1em 1em 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 17px;
+}
+
+.expand-icon {
+  pointer-events: none;
+  position: absolute;
+  right: 1em;
+  transition: all 150ms ease-out;
+}
+footer {
+  color: #000;
+  height: 25vh;
+  background: linear-gradient(to bottom, #629bd5, #92d5f3);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2%;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 40%;
+  padding-top: 2%;
+  margin: 2%;
+}
+
+.footer-container ul {
+  list-style: none;
+  font-size: 20px;
+}
+.footer-container ul li {
+  text-decoration: none;
+}
+
+.footer-container ul li a {
+  color: #2d2d2d;
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3%;
+}
+
+.icon {
+  height: 5vh;
+  margin: 0 10px;
+  font-size: 30px;
+  color: #333;
+  text-decoration: none;
+}
+
+.icon:hover {
+  color: #e4405f;
+}
+
+.whatsapp:hover {
+  color: #25d366;
+}
+
+.close:hover {
+  color: #777;
+}
+
+.social-media {
+  margin-top: 3%;
+  align-items: stretch;
+}
+
+.slogan {
+  color: #000;
+  padding-top: 2%;
+  font-size: 20px;
+}
+
+.head {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  padding-top: 2%;
+}

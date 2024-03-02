@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Uludağ Kaya Hotel</title>
+    <link rel="stylesheet" href="../Style.css" />
+    <link rel="stylesheet" href="../Pages/LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="../Pages/StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+
+    <div class="container">
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel12.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel13.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel14.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="image">
+        <img
+          src="../Assets/WinterHotel/otel15.jpeg"
+          alt=""
+        />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Uludağ Kaya Hotel</div>
+
+    <div class="horizontalLine"></div>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">
+        Unparalleled Location: Embracing Nature's Majesty
+      </div>
+      Situated amidst the majestic peaks of Uludağ, Uludağ Kaya Hotel offers an
+      unparalleled location, providing guests with breathtaking views of
+      snow-covered landscapes. Whether you're an avid skier or a nature
+      enthusiast, the hotel's proximity to outdoor adventures ensures a
+      memorable mountain experience.
+      <div class="h2ofcontainerexp">
+        Luxurious Accommodations: Comfort Beyond Expectations
+      </div>
+      Step into a world of luxury with our meticulously designed accommodations.
+      Uludağ Kaya Hotel features rooms and suites that blend modern elegance
+      with mountain charm, providing a cozy retreat after a day of exploration
+      or winter sports.
+      <div class="h2ofcontainerexp">
+        Winter Wonderland Activities: Thrills for Every Explorer
+      </div>
+      Experience the thrill of winter sports and activities right at your
+      doorstep. Uludağ Kaya Hotel offers easy access to skiing, snowboarding,
+      and snowshoeing, ensuring that adventure enthusiasts of all levels can
+      make the most of their stay in this winter wonderland.
+      <div class="h2ofcontainerexp">
+        Relaxation and Wellness: Spa Serenity in the Mountains
+      </div>
+      After a day of winter activities, rejuvenate your senses at our spa. Our
+      wellness facilities, including saunas and Turkish baths, provide the
+      perfect sanctuary for relaxation. Unwind and pamper yourself amidst the
+      tranquility of Uludağ.
+      <div class="h2ofcontainerexp">
+        Event Spaces with Mountain Views: Memorable Gatherings
+      </div>
+      For those planning events, Uludağ Kaya Hotel offers versatile event spaces
+      with panoramic mountain views. Whether it's a conference, wedding, or
+      special celebration, our dedicated team ensures that your event is
+      seamlessly executed in a stunning setting.
+      <div class="h2ofcontainerexp">
+        Warm Hospitality: A Home Away from Home
+      </div>
+      Experience the warmth of Turkish hospitality at Uludağ Kaya Hotel. Our
+      attentive staff is dedicated to ensuring that your stay is not just
+      comfortable but truly memorable. From personalized service to thoughtful
+      gestures, we make every guest feel at home.
+      <div class="h2ofcontainerexp">
+        Year-Round Beauty: Beyond Winter Wonders
+      </div>
+      While renowned for its winter wonders, Uludağ Kaya Hotel's beauty extends
+      throughout the year. Spring and summer reveal lush landscapes and hiking
+      trails, making it an ideal destination for those seeking mountain retreats
+      in every season.
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Browse available rooms</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda6.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Mountain-View Retreat: Standard Room
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$241</h5>
+              <p class="card-address">
+                Our Standard Rooms at Uludağ Kaya Hotel provide a cozy and
+                comfortable mountain-view retreat. Enjoy the warmth of the
+                fireplace and take in the stunning views of the snow-covered
+                peaks right from your room. With modern amenities and a touch of
+                mountain charm, these rooms offer a delightful escape for those
+                seeking simplicity and comfort.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../Assets/WinterHotel/oda7.jpeg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Alpine Elegance: Deluxe Suite with Balcony
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$364,99</h5>
+              <p class="card-address">
+                Indulge in Alpine elegance with our Deluxe Suites featuring a
+                private balcony. These spacious suites offer a perfect blend of
+                luxury and comfort, providing a serene escape after a day of
+                winter adventures. Enjoy the crisp mountain air and panoramic
+                views as you unwind in style.
+              </p>
+              <p class="card-details">1 Bed &middot; 1 bath &middot; 50 sqft</p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../Pages/StyleContact.css">
+    <link rel="stylesheet" href="../Style.css">
+</head>
+<body>
+  <script>
+    document.addEventListener("scroll", function () {
+      var scrollPercentage =
+        (document.documentElement.scrollTop + document.body.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+
+      document.documentElement.style.setProperty(
+        "--scroll",
+        scrollPercentage
+      );
+    });
+  </script>
+  <header>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.getElementById("hamburger-menu");
+        const navbarList = document.querySelector(".navbar-list");
+
+        hamburgerMenu.addEventListener("click", function () {
+          navbarList.classList.toggle("show");
+        });
+      });
+    </script>
+
+    <nav class="navbar">
+      <a href="../index.html" class="logo">
+        <img src="../Assets/Logo.png" alt="" />
+      </a>
+
+      <div class="hamburger-menu" id="hamburger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="navbar-list">
+        <li><a class="active" href="../index.html">Homepage</a></li>
+        <li>
+          <a href="#"
+            >Hotel
+            <i
+              class="fas fa-chevron-down"
+              style="font-size: 20px; color: rgb(0, 0, 0)"
+            ></i
+          ></a>
+
+          <ul class="submenu">
+            <li>
+              <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"
+            >Tour
+            <i
+              class="fas fa-chevron-down"
+              style="font-size: 20px; color: rgb(0, 0, 0)"
+            ></i
+          ></a>
+          <ul class="submenu">
+            <li>
+              <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="../Pages/faqpage.html">F.A.Q.</a></li>
+        <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+        <li><a href="../Pages/contactUs.html">Contact</a></li>
+        <li>
+          <a href="../Pages/login.html" id="signin">Sign in | Log in</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <script>
+    document.addEventListener("scroll", function () {
+      var scrollPercentage =
+        (document.documentElement.scrollTop + document.body.scrollTop) /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight);
+
+      document.documentElement.style.setProperty(
+        "--scroll",
+        scrollPercentage
+      );
+    });
+  </script>
+  <form class="form">
+    <h2>CONTACT US</h2>
+    <p type="Name:"><input placeholder="Write your name here.."></input></p>
+    <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+    <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
+    <button>Send Message</button>
+    <div class="info">
+      <span class="fa fa-phone"></span>+905428975461
+      <span class="fa fa-envelope-o"></span> info@BIBTour.com
+    </div>
+  </form>
+  <footer>
+    <div class="links">
+      <div class="footer-container footer-container1">
+        <h4>EXPLORE</h4>
+        <ul>
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../Pages/CampaingOtels.html">Campaign Hotels</a>
+          </li>
+          <li>
+            <a href="../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+          </li>
+          <li>
+            <a href="../Pages/winterhotel.html">Winter Hotels</a>
+          </li>
+          <li>
+            <a href="../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+          </li>
+          <li>
+            <a href="../Pages/Tours/CultureTours.html">Culture Tours</a>
+          </li>
+          <li>
+            <a href="../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-container footer-container2">
+        <h4>INSTITIONAL</h4>
+        <ul>
+          <li><a href="../Pages/aboutUsPage.html">About Us</a></li>
+          <li>
+            <a href="../Pages/contactUs.html">Contact</a>
+          </li>
+          <li><a href="">F.A.Q</a></li>
+        </ul>
+      </div>
+      <div class="footer-container footer-container3">
+        <h4>PRIVACY POLICY</h4>
+        <ul>
+          <li><a href="">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="social-media">
+      <div class="social-icons">
+        <a href="#" class="icon" target="_blank">
+          <img
+            src="../Assets/instagram.png"
+            width="50px"
+            height="50px"
+            alt="instagramLogo"
+          />
+        </a>
+        <a
+          href="https://wa.me/1234567890"
+          class="icon whatsapp"
+          target="_blank"
+        >
+          <img src="../Assets/Whatsapp.png" alt="" />
+        </a>
+        <a href="#" class="icon close">
+          <img src="../Assets/X.png" alt="" />
+        </a>
+      </div>
+      <div class="slogan">
+        <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Boyalık Beach Hotel</title>
+    <link rel="stylesheet" href="Style.css" />
+    <link rel="stylesheet" href="LuxuryVoyageTorba.css" />
+    <link rel="stylesheet" href="StyleCampaignOtels.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburgerMenu = document.getElementById("hamburger-menu");
+          const navbarList = document.querySelector(".navbar-list");
+
+          hamburgerMenu.addEventListener("click", function () {
+            navbarList.classList.toggle("show");
+          });
+        });
+      </script>
+
+     
+    </header>
+    <script>
+      document.addEventListener("scroll", function () {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        document.documentElement.style.setProperty(
+          "--scroll",
+          scrollPercentage
+        );
+      });
+    </script>
+    <div class="container">
+      <div class="image">
+        <img src="../../Assets/images/francefoodslider1.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/francefoodslider2.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/francefoodslider3.jpg" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/francefoodslider4.webp" alt="" />
+      </div>
+      <div class="image">
+        <img src="../../Assets/images/francefoodslider5.webp" alt="" />
+      </div>
+
+      <div class="button">
+        <a onclick="nextimg(-1)" class="prev">&#10094;</a>
+        <a onclick="nextimg(1)" class="next">&#10095;</a>
+      </div>
+
+      <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+
+    <div class="headofotel">Taste of France Tour</div>
+
+    <div class="horizontalLine"></div>
+
+    <script>
+      var imageno = 1;
+      displayimg(imageno);
+
+      function nextimg(n) {
+        displayimg((imageno += n));
+      }
+
+      function currentSlide(n) {
+        displayimg((imageno = n));
+      }
+
+      function displayimg(n) {
+        var i;
+        var image = document.getElementsByClassName("image");
+        var dots = document.getElementsByClassName("dot");
+
+        if (n > image.length) {
+          imageno = 1;
+        }
+
+        if (n < 1) {
+          imageno = image.length;
+        }
+
+        for (i = 0; i < image.length; i++) {
+          image[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        image[imageno - 1].style.display = "block";
+        dots[imageno - 1].className += " active";
+      }
+    </script>
+    <div class="explanationofhotel glass">
+      <div class="h2ofcontainerexp">Taste of France Tour</div>
+      France, a gastronomic paradise renowned for reaching the pinnacle of world
+      cuisine, with its famous wines and unique flavors, invites food
+      enthusiasts on an unforgettable experience through a French Food Tour.
+      <div class="h2ofcontainerexp">Gastronomic Capitals of Paris</div>
+      Paris, a capital in the world of gastronomy, boasts internationally
+      acclaimed restaurants, cafes, and patisseries. The tour takes you through
+      iconic areas such as Champs-Élysées, Montmartre, and Le Marais, offering
+      the opportunity to savor unique flavors.
+      <div class="h2ofcontainerexp">Bourgogne Wine Tours</div>
+      The Bourgogne region is among the world's finest wine-producing areas.
+      Wine tours amidst vineyards provide an excellent way to explore the wine
+      culture of this region.
+      <div class="h2ofcontainerexp">Tour Highlights:</div>
+      <ol>
+        <li>
+          French Cooking Class: Engage in a hands-on French cooking class where
+          participants can learn to prepare classic French dishes under the
+          guidance of a skilled chef.
+        </li>
+        <li>
+          Gastronomic Tour in Lyon: Explore Lyon, renowned for its gastronomic
+          excellence.
+        </li>
+        <li>
+          Wine Tasting in Burgundy: Embark on a wine tasting tour in the
+          Burgundy region, known for its exceptional wines.
+        </li>
+        <li>
+          Chocolate and Pastry Tour in Paris: Indulge in a chocolate and pastry
+          tour in Paris, visiting renowned chocolatiers and patisseries to
+          sample exquisite chocolates, pastries, and macarons.
+        </li>
+        <li>
+          Cheese Tasting in Normandy: Discover the rich variety of French
+          cheeses with a tasting session, perhaps focusing on the Camembert and
+          Pont-l'Évêque varieties in Normandy.
+        </li>
+      </ol>
+      <div class="properties">
+        <i class="fa fa-bed" style="font-size: 32px"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-star" style="font-size: 36px; color: gold"></i>
+        <i class="fa fa-wheelchair" style="font-size: 36px"></i>
+        <i class="fa fa-paw" style="font-size: 36px"></i>
+        <i class="fa fa-signal" style="font-size: 36px"></i>
+      </div>
+    </div>
+    <div class="hotel-body">
+      <h1><div class="head">Tour Participation Options</div></h1>
+      <div class="head"></div>
+      <div class="aside"></div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/francefoodtour1.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">
+                Ultra All-Inclusive Tour Participation
+              </p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$269</h5>
+              <p class="card-address">
+                If you aspire to experience the most exclusive and luxurious
+                side of French flavors, the Ultra All-Inclusive France Food Tour
+                is tailored just for you. This tour includes private dining
+                experiences in Michelin-starred restaurants, wine tasting
+                events, and exclusive workshops with renowned chefs.
+              </p>
+              <p class="card-details">
+                VIP access &middot; Michelin-starred Restaurants &middot;
+                Premium Accommodation
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/francefoodtour2.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">All-Inclusive Tour Participation</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$239</h5>
+              <p class="card-address">
+                For those seeking a perfect blend of comfort and culinary
+                delight, the All-Inclusive France Food Tour is an ideal choice.
+                This comprehensive package includes transportation,
+                accommodation, and delightful experiences at restaurants
+                showcasing the finest examples of French cuisine.
+              </p>
+              <p class="card-details">
+                Guided Tours &middot; Delightful Meals &middot; Hassle-free
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img
+              class="card-img"
+              src="../../Assets/images/francefoodtour3.jpg"
+              alt=""
+            />
+            <div class="card-middle">
+              <p class="card-middle-text">Standard Participation</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$209</h5>
+              <p class="card-address">
+                For those looking for a more budget-friendly option, the
+                Standard Participation France Food Tour is a fantastic way to
+                discover the hidden treasures of French cuisine.
+              </p>
+              <p class="card-details">
+                Public Transportation &middot; Snacks &middot; Self Guided
+              </p>
+            </div>
+            <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+              <a
+                href="../../Pages/purchase.html"
+                class="card-btnn"
+                style="background-color: rgb(54, 50, 162)"
+                >Proceed to Payment</a
+              >
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../../Pages/CampaingOtels.html">Campaign Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/honeyMoonHotels.html">Honeymoon Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/winterhotel.html">Winter Hotels</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/CruiseTours.html">Cruise Tours</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/CultureTours.html">Culture Tours</a>
+            </li>
+            <li>
+              <a href="../../Pages/Tours/FlavorTours.html">Flavor Tours</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="../../Pages/aboutUsPage.html">About Us</a></li>
+            <li>
+              <a href="../../Pages/contactUs.html">Contact</a>
+            </li>
+            <li><a href="../../Pages/faqpage.html">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../../Assets/instagram.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../../Assets/Whatsapp.png" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img src="../../Assets/X.png" alt="" />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

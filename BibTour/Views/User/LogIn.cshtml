@@ -1,0 +1,217 @@
+﻿@model  BibTour.Models.LoginDTO
+@{
+    Layout = null;
+}
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/BIBTour/Pages/login.css" />
+    <link rel="stylesheet" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <title>BIBtour | Log in</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("scroll", function () {
+            var scrollPercentage =
+                (document.documentElement.scrollTop + document.body.scrollTop) /
+                (document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight);
+
+            document.documentElement.style.setProperty(
+                "--scroll",
+                scrollPercentage
+            );
+        });
+    </script>
+    <header>
+        @section script{
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    const hamburgerMenu = document.getElementById("hamburger-menu");
+                    const navbarList = document.querySelector(".navbar-list");
+
+                    hamburgerMenu.addEventListener("click", function () {
+                        navbarList.classList.toggle("show");
+                    });
+                });
+            </script>
+
+        }
+
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="container">
+        <div class="form-container sign-in">
+            @using (Html.BeginForm("LogIn", "User", FormMethod.Post, new { id = "loginForm" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <h1>Log In</h1>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password)
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control" })
+                </div>
+
+                <button type="submit" class="btn btn-primary" onclick="return validateFormLogIn()">Log In</button>
+            }
+        </div>
+
+        <script>
+            function validateFormLogIn() {
+                var email = document.getElementById("Email").value;
+                var password = document.getElementById("Password").value;
+
+                if (email === "" || password === "") {
+                    alert("Please fill in all the required fields.");
+                    return false;
+                }
+                else {
+                    document.getElementById("loginForm").submit();
+                    return true;
+                }
+            }
+        </script>
+
+        <div class="toggle-container">
+
+        </div>
+
+        <div class="toggle-container">
+        </div>
+    </div>
+
+    <script src="~/BIBTour/Pages/login.js"></script>
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

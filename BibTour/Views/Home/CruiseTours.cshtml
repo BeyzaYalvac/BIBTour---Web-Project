@@ -1,0 +1,346 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Cruise Tours</title>
+    <link rel="stylesheet" href="~/BIBTour/Pages/StyleCampaignOtels.css" />
+    <link rel="stylesheet" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<body>
+
+    <header>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const hamburgerMenu = document.getElementById("hamburger-menu");
+                const navbarList = document.querySelector(".navbar-list");
+
+                hamburgerMenu.addEventListener("click", function () {
+                    navbarList.classList.toggle("show");
+                });
+            });</script>
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+
+    <script src="~/BIBTour/Pages/ScriptSlider.js"></script>
+    <main>
+        <section class="carousell">
+            <div class="img-list" id="img-list">
+                <img src="~/BIBTour/Assets/images/cruisetour.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/images/cruisetour1.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/images/cruisetour2.jpg" width="1000" />
+
+            </div>
+            <div class="content">
+                <div class="text-content">
+                    <h2>Cruise Tours</h2>
+                    <p>
+                        Comfortable accommodation on luxury ships, unique destinations around the world,
+                        unlimited entertainment and a feast of taste... Cruise tours open the doors of your
+                        dream holiday. Join the magical adventure of the sea and let unforgettable memories
+                        begin with a cruise.
+                    </p>
+                </div>
+            </div>
+            <div class="btn-section">
+                <div class="caro-btn" onclick="slideImg(0)"></div>
+                <div class="caro-btn" onclick="slideImg(1)"></div>
+                <div class="caro-btn" onclick="slideImg(2)"></div>
+
+            </div>
+        </section>
+        <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    </main>
+    <div class="hotel-body">
+        <h1><div class="head">Cruise Tours</div></h1>
+        <div class="head"></div>
+
+    </div>
+    <div class="otel-card">
+        <figure class="cardO">
+            <div class="card-hero">
+                <img class="card-img" src="~/BIBTour/Assets/images/cruisetour1.jpg" alt="" />
+                <div class="card-middle">
+                    <p class="card-middle-text">Costa Deliziosa World Cruises</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h5 class="card-price">$1600/pp</h5>
+                    <p class="card-address">
+                        A cruise around the world takes you to the most impressive destinations around
+                        the world on luxury ships. Discover unforgettable destinations, from the ancient cities
+                        of the Mediterranean to the mysterious cultures of Asia. Comfortable ship life, various
+                        activities, unforgettable tastes.
+
+                    </p>
+                    <p class="card-details">
+                        2 Months &middot; Istanbul→Greek,Holland,France &middot; With Visa
+                    </p>
+                </div> <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                    <a href="@Url.Action("LogIn", "User")"
+                       class="card-btnn"
+                       style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                </div>
+                <div class="card-buttons">
+                    <a href="~/BIBTour/Pages/Tours/CostaCruise.html" class="card-btnn">View More</a>
+                </div>
+            </div>
+        </figure>
+    </div>
+    <div class="otel-card">
+        <figure class="cardO">
+            <div class="card-hero">
+                <img class="card-img" src="~/BIBTour/Assets/images/cruisetour2.jpg" alt="" />
+                <div class="card-middle">
+                    <p class="card-middle-text">Mediterranean Tours</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h5 class="card-price">$2600/pp</h5>
+                    <p class="card-address">
+                        Mediterranean Cruise Tour invites you to an unforgettable journey with its
+                        warm sun, historical riches and deep blue sea. This short holiday offers the
+                        perfect way to explore the pearl cities of the Mediterranean and enjoy
+                        breathtaking views on luxury ships.
+                    </p>
+                    <p class="card-details">
+                        8 Nights 9 Days &middot; Istanbul→Athens,Mykonos,Sicily &middot; Visa Free
+                    </p>
+                </div> <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                    <a href="@Url.Action("LogIn", "User")"
+                       class="card-btnn"
+                       style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                </div>
+                <div class="card-buttons">
+                    <a href="~/BIBTour/Pages/Tours/MediterraneanTours.html" class="card-btnn">View More</a>
+                </div>
+            </div>
+        </figure>
+    </div>
+    <div class="otel-card">
+        <figure class="cardO">
+            <div class="card-hero">
+                <img class="card-img" src="~/BIBTour/Assets/images/costacruiseslider4.jpg alt="" />
+                <div class="card-middle">
+                    <p class="card-middle-text">River Tours</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h5 class="card-price">$8600/pp</h5>
+                    <p class="card-address">
+                        . This short but impressive tour is the ideal
+                        way to explore historic riverside towns, navigate the tranquility of nature and
+                        enjoy relaxing in a dreamy atmosphere.
+                    </p>
+                    <p class="card-details">
+                        5 Nights 6 Days &middot; Istanbul→Dusseldorf,Mannheim,Koblenz &middot; With Visa
+                    </p>
+                </div> <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                    <a href="@Url.Action("LogIn", "User")"
+                       class="card-btnn"
+                       style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                </div>
+                <div class="card-buttons">
+                    <a href="~/BIBTour/Pages/Tours/RiverTours.html" class="card-btnn">View More</a>
+                </div>
+            </div>
+        </figure>
+    </div>
+    <div class="otel-card">
+        <figure class="cardO">
+            <div class="card-hero">
+                <img class="card-img" src="~/BIBTour/Assets/images/cruisetour4.jpg" alt="" />
+                <div class="card-middle">
+                    <p class="card-middle-text">Royal Caribbean Tours</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h5 class="card-price">$7000/pp</h5>
+                    <p class="card-address">
+                        This short but impressive tour
+                        is the ideal way to discover the magnificent beauty of the Caribbean
+                        islands and enjoy a dream holiday on luxury ships.
+                    </p>
+                    <p class="card-details">
+                        Three Month &middot;Istanbul→Miami,Florida,Tampa  &middot; With Visa
+                    </p>
+                </div> <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                    <a href="@Url.Action("LogIn", "User")"
+                       class="card-btnn"
+                       style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                </div>
+                <div class="card-buttons">
+                    <a href="~/BIBTour/Pages/Tours/RoyalCaribbeanTours.html" class="card-btnn">View More</a>
+                </div>
+            </div>
+        </figure>
+    </div>
+    <div class="otel-card">
+        <figure class="cardO">
+            <div class="card-hero">
+                <img class="card-img" src="~/BIBTour/Assets/images/cruisetour5.jpg" alt="" />
+                <div class="card-middle">
+                    <p class="card-middle-text">Far East Cruise Tours</p>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="card-info">
+                    <h5 class="card-price">$1000/pp</h5>
+                    <p class="card-address">
+                        Far East Cruise Tours invites you to a journey where mystical cultures,
+                        ancient traditions and modern charms meet.
+                    </p>
+                    <p class="card-details">
+                        16 Nights 17 Days &middot; Istanbul→Vietnam,Thailand,Singapore &middot; With Visa
+                    </p>
+                </div> <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                    <a href="@Url.Action("LogIn", "User")"
+                       class="card-btnn"
+                       style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                </div>
+                <div class="card-buttons">
+                    <a href="~/BIBTour/Pages/Tours/FarEasternCuisine.html" class="card-btnn">View More</a>
+                </div>
+            </div>
+        </figure>
+    </div>
+
+    </div>
+    <script>
+        document.addEventListener("scroll", function () {
+            var scrollPercentage =
+                (document.documentElement.scrollTop + document.body.scrollTop) /
+                (document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight);
+
+            document.documentElement.style.setProperty(
+                "--scroll",
+                scrollPercentage
+            );
+        });
+    </script>
+    @section Script{
+        <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    }
+
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour-CruiseTours</title>
+    <link rel="stylesheet" href="StyleCampaignOtels.css" />
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <script src="Script.js"></script>
+    <header>
+      <a
+        href="index.html"
+        class="logo"
+      >
+        <img src="../Assets/Logo.png" alt="" />
+      </a>
+     
+    </header>
+    <script src="CampsOtels.js"></script>
+    <main>
+      <section class="carousell">
+        <div class="img-list" id="img-list">
+          <img src="../images/cruisetour.jpg" width="1000" />
+          <img src="../images/FlavorTour.jpg" width="1000" />
+          <img src="../images/FlavorTour3.jpg" width="1000" />
+          <img src="../" width="1000" />
+          <img src="../" width="1000" />
+        </div>
+        <div class="content">
+          <div class="text-content">
+            <h2>Cruise Tours</h2>
+            <p>
+                Comfortable accommodation on luxury ships, unique destinations around the world,
+                 unlimited entertainment and a feast of taste... Cruise tours open the doors of your
+                  dream holiday. Join the magical adventure of the sea and let unforgettable memories
+                   begin with a cruise.
+            </p>
+          </div>
+        </div>
+        <div class="btn-section">
+          <div class="caro-btn" onclick="slideImg(0)"></div>
+          <div class="caro-btn" onclick="slideImg(1)"></div>
+          <div class="caro-btn" onclick="slideImg(2)"></div>
+          <div class="caro-btn" onclick="slideImg(3)"></div>
+          <div class="caro-btn" onclick="slideImg(4)"></div>
+        </div>
+      </section>
+    </main>
+    <div class="hotel-body">
+      <h1><div class="head">Cruise Tours</div></h1>
+      <div class="head"></div>
+      <aside id="sidebar">
+        <h2 id="baslik">Filter</h2>
+        <form name="filter" id="filter">
+          Transportation Choose: <br> <input type="radio" name="transportation" value="Bus"> Bus 
+          <input type="radio" name="transportation" value="Plane"> Plane
+          <br>
+          <br>
+          
+
+          Price Scale: <br><input type="radio" name="price" value="low">  $0-$3000 <br>
+          <input type="radio" name="price" value="mid">  $3000-$9000 <br>
+          <input type="radio" name="price" value="high">  $9000-$30000 <br>  <br>
+
+          Duration: <br><input type="checkbox" name="short"> 0-10 Days <br>
+          <input type="checkbox" name="middle"> 10-20 Days <br>
+          <input type="checkbox" name="long"> 20-30 Days <br> <br>
+
+          <input type="submit" value="View Options"> 
+          <input type="reset" value="Reset">
+
+
+
+
+
+        </form>
+
+      </aside>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour1.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Costa Deliziosa World Cruises</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$1600/pp</h5>
+              <p class="card-address">
+                A cruise around the world takes you to the most impressive destinations around
+                 the world on luxury ships. Discover unforgettable destinations, from the ancient cities
+                  of the Mediterranean to the mysterious cultures of Asia. Comfortable ship life, various
+                   activities, unforgettable tastes.
+                   
+              </p>
+              <p class="card-details">
+                2 Months &middot; Istanbul→Greek,Holland,France &middot; With Visa
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour2.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Mediterranean Tours</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$2600/pp</h5>
+              <p class="card-address">
+                Mediterranean Cruise Tour invites you to an unforgettable journey with its
+                 warm sun, historical riches and deep blue sea. This short holiday offers the
+                  perfect way to explore the pearl cities of the Mediterranean and enjoy
+                   breathtaking views on luxury ships.
+              </p>
+              <p class="card-details">
+                8 Nights 9 Days &middot; Istanbul→Athens,Mykonos,Sicily &middot; Visa Free
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour3webp.webp" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">River Tours</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$8600/pp</h5>
+              <p class="card-address">
+                . This short but impressive tour is the ideal
+                  way to explore historic riverside towns, navigate the tranquility of nature and
+                   enjoy relaxing in a dreamy atmosphere.
+              </p>
+              <p class="card-details">
+                5 Nights 6 Days &middot; Istanbul→Dusseldorf,Mannheim,Koblenz &middot; With Visa
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour4.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Royal Caribbean Tours</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$7000/pp</h5>
+              <p class="card-address">
+                This short but impressive tour
+                  is the ideal way to discover the magnificent beauty of the Caribbean
+                   islands and enjoy a dream holiday on luxury ships.
+              </p>
+              <p class="card-details">
+                Three Month &middot;Istanbul→Miami,Florida,Tampa  &middot; With Visa
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour5.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Far East Cruise Tours</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$1000/pp</h5>
+              <p class="card-address">
+                Far East Cruise Tours invites you to a journey where mystical cultures,
+                 ancient traditions and modern charms meet. 
+              </p>
+              <p class="card-details">
+                16 Nights 17 Days &middot; Istanbul→Vietnam,Thailand,Singapore &middot; With Visa
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetour6.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Celestyal Cruises</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$21000/pp</h5>
+              <p class="card-address">
+                Celestyal Cruises is waiting for you to discover the fascinating islands
+                 of the Aegean, follow the traces of history and enjoy a unique holiday on a luxury ship.
+              </p>
+              <p class="card-details">
+                3 nights 4 days &middot;Aydin→Santorini,Athena  &middot; Visa Free
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+      <div class="otel-card">
+        <figure class="cardO">
+          <div class="card-hero">
+            <img class="card-img" src="../images/cruisetours7.jpg" alt="" />
+            <div class="card-middle">
+              <p class="card-middle-text">Baltic Capitals Cruises</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="card-info">
+              <h5 class="card-price">$10000/pp</h5>
+              <p class="card-address">
+                This short but impressive tour is the ideal way to
+                 travel in luxury to the capitals of the Baltic Sea and 
+                 discover the old cities, each with its own history.
+                   
+              </p>
+              <p class="card-details">
+                13 Night 14 Days &middot; Istanbul→Amsterdam,Stockholm &middot; Visa Free
+              </p>
+            </div>
+            <div class="card-buttons">
+              <a href="#" class="card-btnn">View More</a>
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+    <script src="CampOtels.js"></script>
+    <footer>
+      <div class="links">
+        <div class="footer-container footer-container1">
+          <h4>EXPLORE</h4>
+          <ul>
+            <li>
+              <a
+                href="../WebProject_2100005861_2000003934_2000004353_Task1/index.html"
+                >Home</a
+              >
+            </li>
+            <li><a href="">Tours</a></li>
+            <li><a href="">Hotels</a></li>
+            <li><a href="">Campaigns</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container2">
+          <h4>INSTITIONAL</h4>
+          <ul>
+            <li><a href="">About Us</a></li>
+            <li>
+              <a
+                href="../WebProject_2100005861_2000003934_2000004353_Task1/Pages/contactUs.html"
+                >Contact</a
+              >
+            </li>
+            <li><a href="">F.A.Q</a></li>
+          </ul>
+        </div>
+        <div class="footer-container footer-container3">
+          <h4>PRIVACY POLICY</h4>
+          <ul>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="social-media">
+        <div class="social-icons">
+          <a href="#" class="icon" target="_blank">
+            <img
+              src="../images/insta.png"
+              width="50px"
+              height="50px"
+              alt="instagramLogo"
+            />
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            class="icon whatsapp"
+            target="_blank"
+          >
+            <img src="../" alt="" />
+          </a>
+          <a href="#" class="icon close">
+            <img
+              src="../images/twiter.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="slogan">
+          <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

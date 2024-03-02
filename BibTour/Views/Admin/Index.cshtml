@@ -1,0 +1,24 @@
+﻿@model List<BibTour.Models.LoginDTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.UserId</td>
+            <td>@user.Name</td> 
+            <td> 
+                <a href="@Url.Action("Delete", "Admin", new { id = user.UserId })" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    }
+</table>

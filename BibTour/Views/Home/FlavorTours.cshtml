@@ -1,0 +1,334 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BIBTour | Flavor Tours</title>
+    <link rel="stylesheet" href="~/BIBTour/Pages/StyleCampaignOtels.css" />
+    <link rel="stylesheet" href="~/BIBTour/Style.css" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+</head>
+<body>
+    <script src="~/BIBTour/Script.js"></script>
+    <header>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const hamburgerMenu = document.getElementById("hamburger-menu");
+                const navbarList = document.querySelector(".navbar-list");
+
+                hamburgerMenu.addEventListener("click", function () {
+                    navbarList.classList.toggle("show");
+                });
+            });
+        </script>
+
+        <nav class="navbar">
+            <a href="@Url.Action("Index", "Home")" class="logo">
+                <img src="~/BIBTour/Assets/Logo.png" alt="" />
+            </a>
+
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul class="navbar-list">
+                <li><a class="active" href="@Url.Action("Index", "Home")">Homepage</a></li>
+                <li>
+                    <a href="#">Hotel <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a></li>
+                        <li><a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a></li>
+                        <li><a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Tour <i class="fas fa-chevron-down" style="font-size: 20px; color: rgb(0, 0, 0)"></i></a>
+                    <ul class="submenu">
+                        <li><a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a></li>
+                        <li><a href="@Url.Action("CultureTours", "Home")">Culture Tours</a></li>
+                        <li>
+                            <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q.</a></li>
+                <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                <li><a href="@Url.Action("ContactUs", "Home")">Contact</a></li>
+
+
+            </ul>
+        </nav>
+    </header>
+    <script src="CampsOtels.js"></script>
+    <main>
+        <section class="carousell">
+            <div class="img-list" id="img-list">
+                <img src="~/BIBTour/Assets/images/FlavorTour3.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/images/FlavorTour.jpg" width="1000" />
+                <img src="~/BIBTour/Assets/images/FlavorTour3.jpg" width="1000" />
+            </div>
+            <div class="content">
+                <div class="text-content">
+                    <h2>Flavor Tours</h2>
+                    <p>
+                        Food is a cross-cultural nexus and has diverse and delicious
+                        variations around the world. Throughout history, people have
+                        developed different types of food using various ingredients,
+                        resulting in a rich culinary heritage.
+                    </p>
+                </div>
+            </div>
+            <div class="btn-section">
+                <div class="caro-btn" onclick="slideImg(0)"></div>
+                <div class="caro-btn" onclick="slideImg(1)"></div>
+                <div class="caro-btn" onclick="slideImg(2)"></div>
+            </div>
+        </section>
+        <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    </main>
+    <div class="hotel-body">
+        <h1><div class="head">Flavor Tours</div></h1>
+        <div class="head"></div>
+
+
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/images/IstanbulFlavorTour.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Istanbul Flavor Tour</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$169/pp</h5>
+                        <p class="card-address">
+                            Wander through the streets of Istanbul and discover fresh spices
+                            in the Grand Bazaar and Spice Bazaar. Taste delicious seafood on
+                            the coast of Arnavutköy and meet the street delicacies in
+                            Beyoğlu. Discover Ottoman flavors in historical restaurants in
+                            Sultanahmet Square.
+                        </p>
+                        <p class="card-details">
+                            7 nights 8 days &middot; Transportation by Bus &middot; With
+                            Visa
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/Tours/IstanbulFoodTour.html"
+                           class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/images/french-food-ratatouille.webp"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Taste of France Tour</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$269/pp</h5>
+                        <p class="card-address">
+                            French cuisine stands out with its elegant flavors. It is famous
+                            for its sauce dishes, cheese varieties and baked goods. It
+                            attracts attention with its five basic sauces (bechamel,
+                            veloute, espagnole, tomate, hollandaise).
+                        </p>
+                        <p class="card-details">
+                            3 nights 4 days &middot; Transportation by Plane &middot; Visa
+                            Free
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/Tours/FranceFlavorTour.html"
+                           class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/images/Italian-FoodTour.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Italy Flavor Tour</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$869/pp</h5>
+                        <p class="card-address">
+                            Italian cuisine is known for its world-famous pizza and pasta.
+                            The most well-known flavors of this cuisine, where fresh
+                            ingredients are used extensively, include spaghetti bolognese,
+                            risotto and tiramisu.
+                        </p>
+                        <p class="card-details">
+                            5 nights 6 days &middot; Transportation by Plane &middot; With
+                            Visa
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/Tours/ItalyFlavorTour.html" class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="otel-card">
+            <figure class="cardO">
+                <div class="card-hero">
+                    <img class="card-img"
+                         src="~/BIBTour/Assets/images/uzakdogumutfagi.jpg"
+                         alt="" />
+                    <div class="card-middle">
+                        <p class="card-middle-text">Far Eastern Cuisine</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="card-info">
+                        <h5 class="card-price">$779/pp</h5>
+                        <p class="card-address">
+                            Far Eastern countries such as China, Japan, Korea and Thailand
+                            are known for their unique tastes. While Chinese cuisine usually
+                            includes vegetables, rice and chicken, Japanese cuisine is
+                            highlighted by seafood such as sushi and sashimi.
+                        </p>
+                        <p class="card-details">
+                            One Week &middot; Transportation by Plane &middot; Visa Free
+                        </p>
+                    </div>
+                    <div style="margin-bottom: 1%; padding: 1%" class="card-buttons">
+                        <a href="@Url.Action("LogIn", "User")"
+                           class="card-btnn"
+                           style="background-color: rgb(54, 50, 162)">Proceed to Payment</a>
+                    </div>
+                    <div class="card-buttons">
+                        <a href="~/BIBTour/Pages/Tours/FarEasternCuisine.html"
+                           class="card-btnn">View More</a>
+                    </div>
+                </div>
+            </figure>
+        </div>
+    </div>
+    <script src="~/BIBTour/Pages/CampOtels.js"></script>
+    <script>
+        document.addEventListener("scroll", function () {
+            var scrollPercentage =
+                (document.documentElement.scrollTop + document.body.scrollTop) /
+                (document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight);
+
+            document.documentElement.style.setProperty(
+                "--scroll",
+                scrollPercentage
+            );
+        });
+    </script>
+    <footer>
+        <div class="links">
+            <div class="footer-container footer-container1">
+                <h4>EXPLORE</h4>
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CampaignHotels", "Home")">Campaign Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("HoneymoonHotels", "Home")">Honeymoon Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("WinterHotels", "Home")">Winter Hotels</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CruiseTours", "Home")">Cruise Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("CultureTours", "Home")">Culture Tours</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("FlavorTours", "Home")">Flavor Tours</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container2">
+                <h4>INSTITIONAL</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs", "Home")">About Us</a></li>
+                    <li>
+                        <a href="@Url.Action("ContactUs", "Home")">Contact</a>
+                    </li>
+                    <li><a href="@Url.Action("FaqPage", "Home")">F.A.Q</a></li>
+                </ul>
+            </div>
+            <div class="footer-container footer-container3">
+                <h4>PRIVACY POLICY</h4>
+                <ul>
+                    <li><a href="@Url.Action("PrivacyPolicy", "Home")">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="social-media">
+            <div class="social-icons">
+                <a href="#" class="icon" target="_blank">
+                    <img src="~/BIBTour/Assets/instagram.png"
+                         width="50px"
+                         height="50px"
+                         alt="instagramLogo" />
+                </a>
+                <a href="https://wa.me/1234567890"
+                   class="icon whatsapp"
+                   target="_blank">
+                    <img src="~/BIBTour/Assets/Whatsapp.png" alt="" />
+                </a>
+                <a href="#" class="icon close">
+                    <img src="~/BIBTour/Assets/X.png" alt="" />
+                </a>
+            </div>
+            <div class="slogan">
+                <h2>"Discover, Live, Remember: The Journey Begins with BIB Tour!"</h2>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
